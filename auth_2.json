@@ -1,0 +1,261 @@
+{
+  "cookies": [
+    {
+      "name": "_gid",
+      "value": "GA1.2.1379239898.1764010246",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1764096666,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1363724626.1764010246",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1771786246,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "m",
+      "value": "8ca70bea-96bb-457c-b985-2ab03cfe1cb28a07ab",
+      "domain": "m.stripe.com",
+      "path": "/",
+      "expires": 1798570271.00281,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__stripe_mid",
+      "value": "ad28d659-e09d-432a-8116-4fa4ec36b2956a48b3",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1795546271,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "__stripe_sid",
+      "value": "e028d710-763d-4368-8299-e42c07938cd9846cb1",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1764012071,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "sessionid",
+      "value": "fc5a8ce2f661718519beed73",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamCountry",
+      "value": "GE%7C9d41e7cd8e8739e64574db5f33cc4955",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "timezoneOffset",
+      "value": "14400,0",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": 1795546324,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "steamRefresh_steam",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInN0ZWFtIiwgInN1YiI6ICI3NjU2MTE5OTcyNDU1MzAyNiIsICJhdWQiOiBbICJ3ZWIiLCAicmVuZXciLCAiZGVyaXZlIiBdLCAiZXhwIjogMTc4MjE3OTkzMSwgIm5iZiI6IDE3NTUzNzAyNjEsICJpYXQiOiAxNzY0MDEwMjYxLCAianRpIjogIjAwMENfMjc0NkEyNURfNjg2RkYiLCAib2F0IjogMTc2NDAxMDI2MSwgInBlciI6IDEsICJpcF9zdWJqZWN0IjogIjIxMi41OC4xMDIuMjIxIiwgImlwX2NvbmZpcm1lciI6ICIyMTIuNTguMTAyLjIyMSIgfQ.X-IEW6E3shrB2ExpeJVwododgpDc5N2AMc0bQwUJdDGELIEvxLuUk74tfVegt8G3uh-1EorEbmjDrAC7AZiVCw",
+      "domain": "login.steampowered.com",
+      "path": "/",
+      "expires": 1795546261.826969,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamLoginSecure",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAwQ18yNzQ2QTI1RF82ODZGRiIsICJzdWIiOiAiNzY1NjExOTk3MjQ1NTMwMjYiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3NjQwOTY4ODQsICJuYmYiOiAxNzU1MzcwMjYxLCAiaWF0IjogMTc2NDAxMDI2MSwgImp0aSI6ICIwMDE4XzI3NDZBMjU5XzNGNDExIiwgIm9hdCI6IDE3NjQwMTAyNjEsICJydF9leHAiOiAxNzgyMTc5OTMxLCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiMjEyLjU4LjEwMi4yMjEiLCAiaXBfY29uZmlybWVyIjogIjIxMi41OC4xMDIuMjIxIiB9.GbISd6wAa9HSaj2Nv1yywb-2Wen6qevvUvHqFrsgu3Er58tgeZ8F_9Qr9Vi02ZTC1XLwN0WVcwj47Mm6aWRBBw",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": 1798570262.133457,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamCountry",
+      "value": "GE%7C9d41e7cd8e8739e64574db5f33cc4955",
+      "domain": "help.steampowered.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sessionid",
+      "value": "8637171bfc87557356ca822c",
+      "domain": "help.steampowered.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamLoginSecure",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAwQ18yNzQ2QTI1RF82ODZGRiIsICJzdWIiOiAiNzY1NjExOTk3MjQ1NTMwMjYiLCAiYXVkIjogWyAid2ViOmhlbHAiIF0sICJleHAiOiAxNzY0MDk2NzgwLCAibmJmIjogMTc1NTM3MDI2MSwgImlhdCI6IDE3NjQwMTAyNjEsICJqdGkiOiAiMDAxOF8yNzQ2QTI1OV8zRjQxMiIsICJvYXQiOiAxNzY0MDEwMjYxLCAicnRfZXhwIjogMTc4MjE3OTkzMSwgInBlciI6IDAsICJpcF9zdWJqZWN0IjogIjIxMi41OC4xMDIuMjIxIiwgImlwX2NvbmZpcm1lciI6ICIyMTIuNTguMTAyLjIyMSIgfQ.o-b-mCz-NPSp-QaP08YxxWjz33I_IgusBocpqX5WcVCmPh8e2GnalXSa47Uu3mWC6uf_YKQ_IJV6FJKKSBiYDg",
+      "domain": "help.steampowered.com",
+      "path": "/",
+      "expires": 1798570262.178556,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamCountry",
+      "value": "GE%7C9d41e7cd8e8739e64574db5f33cc4955",
+      "domain": "steam.tv",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamLoginSecure",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAwQ18yNzQ2QTI1RF82ODZGRiIsICJzdWIiOiAiNzY1NjExOTk3MjQ1NTMwMjYiLCAiYXVkIjogWyAid2ViOnN0ZWFtdHYiIF0sICJleHAiOiAxNzY0MDk3NzcyLCAibmJmIjogMTc1NTM3MDI2MSwgImlhdCI6IDE3NjQwMTAyNjEsICJqdGkiOiAiMDAxOF8yNzQ2QTI1OV8zRjQxNCIsICJvYXQiOiAxNzY0MDEwMjYxLCAicnRfZXhwIjogMTc4MjE3OTkzMSwgInBlciI6IDAsICJpcF9zdWJqZWN0IjogIjIxMi41OC4xMDIuMjIxIiwgImlwX2NvbmZpcm1lciI6ICIyMTIuNTguMTAyLjIyMSIgfQ.UcGJmvsR9ylw-5EA3PudvykqOdCum8FtfP4y-SA1eF9PfYcxfOQSRfZ1sakbBwznJyV4BJx-HNgtjlzGJh4eAg",
+      "domain": "steam.tv",
+      "path": "/",
+      "expires": 1798570262.2037,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamLoginSecure",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAwQ18yNzQ2QTI1RF82ODZGRiIsICJzdWIiOiAiNzY1NjExOTk3MjQ1NTMwMjYiLCAiYXVkIjogWyAid2ViOmNoZWNrb3V0IiBdLCAiZXhwIjogMTc2NDA5Nzg5NCwgIm5iZiI6IDE3NTUzNzAyNjEsICJpYXQiOiAxNzY0MDEwMjYxLCAianRpIjogIjAwMThfMjc0NkEyNTlfM0Y0MTMiLCAib2F0IjogMTc2NDAxMDI2MSwgInJ0X2V4cCI6IDE3ODIxNzk5MzEsICJwZXIiOiAwLCAiaXBfc3ViamVjdCI6ICIyMTIuNTguMTAyLjIyMSIsICJpcF9jb25maXJtZXIiOiAiMjEyLjU4LjEwMi4yMjEiIH0.m4dauqZwcXZKC32GLS1a3rMd7QYZI7vm7Uak4SDbtNIdhnOWjf6Q1YYEtSftD0x7gE8McPdf-A22VYzjEEz5BA",
+      "domain": "checkout.steampowered.com",
+      "path": "/",
+      "expires": 1798570262.377482,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "steamLoginSecure",
+      "value": "76561199724553026%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAwQ18yNzQ2QTI1RF82ODZGRiIsICJzdWIiOiAiNzY1NjExOTk3MjQ1NTMwMjYiLCAiYXVkIjogWyAid2ViOnN0b3JlIiBdLCAiZXhwIjogMTc2NDA5NzI2NSwgIm5iZiI6IDE3NTUzNzAyNjEsICJpYXQiOiAxNzY0MDEwMjYxLCAianRpIjogIjAwMThfMjc0NkEyNTlfM0Y0MTAiLCAib2F0IjogMTc2NDAxMDI2MSwgInJ0X2V4cCI6IDE3ODIxNzk5MzEsICJwZXIiOiAwLCAiaXBfc3ViamVjdCI6ICIyMTIuNTguMTAyLjIyMSIsICJpcF9jb25maXJtZXIiOiAiMjEyLjU4LjEwMi4yMjEiIH0.diVF35NADeAulGDlshPj3OD-IwPI1gkjjzatG7DJWpTtoqviD6E3cMCjtcJBI6LXtpOMLE2_aw6jz4uVT8ZHDg",
+      "domain": "store.steampowered.com",
+      "path": "/",
+      "expires": 1798570262.726809,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "browserid",
+      "value": "117784539411966333",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": 1795546263.061703,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1171728534.1764010246",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1798570266.257789,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUl-GAguV3RncDoqTjdDf0SjnRvHbI5rrtp8xsqA2_a9AeunjehEUq_D9FuU",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1798570266.367794,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "session",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGVhbV9pZCI6Ijc2NTYxMTk5NzI0NTUzMDI2Iiwibm9uY2UiOjAsImltcGVyc29uYXRlZCI6ZmFsc2UsImlzcyI6ImNzdGVjaCIsImV4cCI6MTc2NDQ0MjI2N30.D0m0ACqee63e10Uo5x_U9U06FCh43sl0Tqr_SZ8WsXI",
+      "domain": "csfloat.com",
+      "path": "/",
+      "expires": 1764442268.048353,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_3V4JQEGNYC",
+      "value": "GS2.1.s1764010246$o1$g1$t1764010323$j60$l0$h0",
+      "domain": ".csfloat.com",
+      "path": "/",
+      "expires": 1798570323.126739,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "webTradeEligibility",
+      "value": "%7B%22allowed%22%3A0%2C%22reason%22%3A16416%2C%22allowed_at_time%22%3A1764615123%2C%22steamguard_required_days%22%3A15%2C%22new_device_cooldown_days%22%3A0%2C%22expiration%22%3A1764010623%2C%22time_checked%22%3A1764010323%7D",
+      "domain": "steamcommunity.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://csfloat.com",
+      "localStorage": [
+        {
+          "name": "theme",
+          "value": "dark"
+        },
+        {
+          "name": "auto_currency_localize_banner_display_count",
+          "value": "2"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1764010246471},\"expires\":1771786246471}}"
+        },
+        {
+          "name": "user",
+          "value": "{\"steam_id\":\"76561199724553026\",\"username\":\"arevik\",\"flags\":32,\"avatar\":\"https://avatars.steamstatic.com/8d4b5b8f30343badd7df0fa82266ad1380248087_full.jpg\",\"email\":\"tinatin.nariashvili@gmail.com\",\"balance\":0,\"pending_balance\":0,\"stall_public\":false,\"away\":false,\"trade_token\":\"HRHhKuCr\",\"statistics\":{\"total_sales\":0,\"total_purchases\":0,\"median_trade_time\":0,\"total_avoided_trades\":0,\"total_failed_trades\":0,\"total_verified_trades\":0,\"total_trades\":0},\"preferences\":{\"offers_enabled\":null,\"max_offer_discount\":800,\"localize_item_names\":false},\"know_your_customer\":\"uninitiated\",\"firebase_messaging\":{\"platform\":null,\"last_updated\":null},\"stripe_connect\":{},\"notification_topic_opt_out\":0,\"obfuscated_id\":\"4263789462148130582\",\"online\":false,\"fee\":0.02,\"withdraw_fee\":0.025,\"subscriptions\":[],\"has_2fa\":false,\"has_api_key\":false}"
+        },
+        {
+          "name": "checkout_cart_contracts",
+          "value": "[]"
+        }
+      ]
+    }
+  ]
+}

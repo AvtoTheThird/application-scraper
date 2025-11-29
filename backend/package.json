@@ -1,0 +1,22 @@
+{
+  "name": "sticker-tracker-backend",
+  "version": "1.0.0",
+  "description": "CS:GO Sticker Application Tracker Backend",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
+    "scrape": "node ../scraper.js",
+    "import": "node scraper/import-data.js",
+    "init-db": "psql -U postgres -d sticker_tracker -f db/schema.sql"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

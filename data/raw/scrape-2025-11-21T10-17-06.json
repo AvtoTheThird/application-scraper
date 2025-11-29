@@ -1,0 +1,101 @@
+[
+  {
+    "timestamp": "2025-11-21T10:09:27.986Z",
+    "sticker": "Scorch Loop",
+    "stickerId": "7891",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 109000,
+      "2x": 25190,
+      "3x": 10258,
+      "4x": 7504,
+      "5x": 1668
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:10:32.938Z",
+    "sticker": "Boom Detonation",
+    "stickerId": "7892",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 65000,
+      "2x": 12065,
+      "3x": 3145,
+      "4x": 1738,
+      "5x": 682
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:11:26.096Z",
+    "sticker": "Bolt Strike (Foil)",
+    "stickerId": "7901",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 22535,
+      "2x": 10826,
+      "3x": 3050,
+      "4x": 1878,
+      "5x": 615
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:12:30.932Z",
+    "sticker": "Bolt Charge (Foil)",
+    "stickerId": "7902",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 22094,
+      "2x": 11789,
+      "3x": 3339,
+      "4x": 1503,
+      "5x": 378
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:14:00.036Z",
+    "sticker": "Boom Detonation (Glitter)",
+    "stickerId": "7897",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 54000,
+      "2x": 13036,
+      "3x": 4591,
+      "4x": 3139,
+      "5x": 1670
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:14:51.868Z",
+    "sticker": "Boom Epicenter (Glitter)",
+    "stickerId": "7898",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 42000,
+      "2x": 8779,
+      "3x": 4247,
+      "4x": 2683,
+      "5x": 1288
+    }
+  },
+  {
+    "timestamp": "2025-11-21T10:15:50.515Z",
+    "sticker": "Ruby Stream (Lenticular)",
+    "stickerId": "7925",
+    "collection": "elemental_crafts",
+    "rarity": "reds",
+    "applications": {
+      "1x": 8105,
+      "2x": 3678,
+      "3x": 713,
+      "4x": 320,
+      "5x": null
+    },
+    "error": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
+  }
+]

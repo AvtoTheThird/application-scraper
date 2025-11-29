@@ -1,0 +1,100 @@
+[
+  {
+    "timestamp": "2025-11-19T12:32:07.240Z",
+    "sticker": "Scorch Loop",
+    "stickerId": "7891",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 109000,
+      "2x": 25016,
+      "3x": 10193,
+      "4x": 7454,
+      "5x": 1651
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:32:59.709Z",
+    "sticker": "Boom Detonation",
+    "stickerId": "7892",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 64000,
+      "2x": 12003,
+      "3x": 3129,
+      "4x": 1732,
+      "5x": 681
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:33:47.375Z",
+    "sticker": "Bolt Strike (Foil)",
+    "stickerId": "7901",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 22423,
+      "2x": 10776,
+      "3x": 3040,
+      "4x": 1875,
+      "5x": 614
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:34:31.994Z",
+    "sticker": "Bolt Charge (Foil)",
+    "stickerId": "7902",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 21979,
+      "2x": 11730,
+      "3x": 3326,
+      "4x": 1496,
+      "5x": 374
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:35:17.113Z",
+    "sticker": "Boom Detonation (Glitter)",
+    "stickerId": "7897",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 53000,
+      "2x": 12953,
+      "3x": 4567,
+      "4x": 3121,
+      "5x": 1664
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:36:05.010Z",
+    "sticker": "Boom Epicenter (Glitter)",
+    "stickerId": "7898",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 42000,
+      "2x": 8734,
+      "3x": 4224,
+      "4x": 2671,
+      "5x": 1284
+    }
+  },
+  {
+    "timestamp": "2025-11-19T12:36:50.365Z",
+    "sticker": "Ruby Stream (Lenticular)",
+    "stickerId": "7925",
+    "collection": "elemental_crafts",
+    "rarity": "reds",
+    "applications": {
+      "1x": 8072,
+      "2x": 3661,
+      "3x": 709,
+      "4x": 319,
+      "5x": 107
+    }
+  }
+]

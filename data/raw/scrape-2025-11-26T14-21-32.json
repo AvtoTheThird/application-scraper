@@ -1,0 +1,819 @@
+[
+  {
+    "timestamp": "2025-11-24T18:56:33.036Z",
+    "sticker": "Scorch Loop",
+    "stickerId": "7891",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 109000,
+      "2x": 25504,
+      "3x": 10384,
+      "4x": 7596,
+      "5x": 1704
+    }
+  },
+  {
+    "timestamp": "2025-11-24T18:57:26.550Z",
+    "sticker": "Boom Detonation",
+    "stickerId": "7892",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": 12177,
+      "3x": 3177,
+      "4x": 1758,
+      "5x": 690
+    }
+  },
+  {
+    "timestamp": "2025-11-24T18:58:20.258Z",
+    "sticker": "Boom Epicenter",
+    "stickerId": "7893",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 75000,
+      "2x": 10062,
+      "3x": 5614,
+      "4x": null,
+      "5x": 2935
+    }
+  },
+  {
+    "timestamp": "2025-11-24T18:59:11.268Z",
+    "sticker": "Boom Blast",
+    "stickerId": "7894",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 60000,
+      "2x": 12285,
+      "3x": 3158,
+      "4x": null,
+      "5x": 738
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:00:03.359Z",
+    "sticker": "High Heat",
+    "stickerId": "7885",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 128000,
+      "2x": 53000,
+      "3x": 12285,
+      "4x": 8135,
+      "5x": 4261
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:00:51.274Z",
+    "sticker": "Winding Scorch",
+    "stickerId": "7888",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 114000,
+      "2x": 40486,
+      "3x": 7710,
+      "4x": 3828,
+      "5x": 1483
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:01:39.638Z",
+    "sticker": "Hydro Wave",
+    "stickerId": "7924",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 99000,
+      "2x": 47000,
+      "3x": 13652,
+      "4x": null,
+      "5x": 3357
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:02:31.235Z",
+    "sticker": "Scorch Loop (Reverse)",
+    "stickerId": "7887",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 69000,
+      "2x": 26821,
+      "3x": 8427,
+      "4x": 4786,
+      "5x": 1520
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:03:17.755Z",
+    "sticker": "Hydro Stream",
+    "stickerId": "7923",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 103000,
+      "2x": 21106,
+      "3x": 6163,
+      "4x": 3581,
+      "5x": 1328
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:04:03.709Z",
+    "sticker": "Hot Rod Heat",
+    "stickerId": "7886",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 73000,
+      "2x": 20134,
+      "3x": 9831,
+      "4x": null,
+      "5x": 2865
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:04:55.678Z",
+    "sticker": "Hydro Geyser",
+    "stickerId": "7922",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 76000,
+      "2x": 14424,
+      "3x": 6070,
+      "4x": 3858,
+      "5x": 2250
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:05:42.672Z",
+    "sticker": "Boom Trail",
+    "stickerId": "7895",
+    "collection": "elemental_crafts",
+    "rarity": "blues",
+    "applications": {
+      "1x": 117000,
+      "2x": 14572,
+      "3x": 4619,
+      "4x": 2527,
+      "5x": 755
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:06:32.119Z",
+    "sticker": "Bolt Strike (Foil)",
+    "stickerId": "7901",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 22777,
+      "2x": 10957,
+      "3x": null,
+      "4x": 1904,
+      "5x": 621
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:07:22.632Z",
+    "sticker": "Bolt Charge (Foil)",
+    "stickerId": "7902",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 22321,
+      "2x": 11927,
+      "3x": 3369,
+      "4x": 1525,
+      "5x": 385
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:08:07.811Z",
+    "sticker": "Bolt Energy (Foil)",
+    "stickerId": "7903",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 23213,
+      "2x": 3844,
+      "3x": 1885,
+      "4x": null,
+      "5x": 623
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:08:58.561Z",
+    "sticker": "Winding Scorch (Foil)",
+    "stickerId": "7904",
+    "collection": "elemental_crafts",
+    "rarity": "pink",
+    "applications": {
+      "1x": 18788,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": 2657
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:10:10.197Z",
+    "sticker": "Boom Detonation (Glitter)",
+    "stickerId": "7897",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 54000,
+      "2x": 13177,
+      "3x": null,
+      "4x": 3170,
+      "5x": 1688
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:11:04.026Z",
+    "sticker": "Boom Epicenter (Glitter)",
+    "stickerId": "7898",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 43000,
+      "2x": 8895,
+      "3x": 4308,
+      "4x": 2726,
+      "5x": 1301
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:11:49.807Z",
+    "sticker": "Boom Blast (Glitter)",
+    "stickerId": "7899",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 47743,
+      "2x": 13928,
+      "3x": 4179,
+      "4x": 2459,
+      "5x": 1146
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:12:37.870Z",
+    "sticker": "Boom Trail (Glitter)",
+    "stickerId": "7900",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 56000,
+      "2x": 25303,
+      "3x": 15267,
+      "4x": 8323,
+      "5x": 1915
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:13:25.456Z",
+    "sticker": "Rainbow Route (Holo)",
+    "stickerId": "7896",
+    "collection": "elemental_crafts",
+    "rarity": "purple",
+    "applications": {
+      "1x": 42000,
+      "2x": 13624,
+      "3x": 9515,
+      "4x": 6636,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:14:17.452Z",
+    "sticker": "Ruby Wave (Lenticular)",
+    "stickerId": "7926",
+    "collection": "elemental_crafts",
+    "rarity": "reds",
+    "applications": {
+      "1x": 6754,
+      "2x": 1750,
+      "3x": 703,
+      "4x": 499,
+      "5x": 252
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:15:03.858Z",
+    "sticker": "Ruby Stream (Lenticular)",
+    "stickerId": "7925",
+    "collection": "elemental_crafts",
+    "rarity": "reds",
+    "applications": {
+      "1x": 8185,
+      "2x": 3717,
+      "3x": 718,
+      "4x": 321,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:15:54.058Z",
+    "sticker": "StarLadder | Budapest 2025",
+    "stickerId": "9617",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": 88,
+      "3x": 54,
+      "4x": 31,
+      "5x": 12
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:16:42.281Z",
+    "sticker": "paiN Gaming | Budapest 2025 ",
+    "stickerId": "9517",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": 265,
+      "2x": 40,
+      "3x": 19,
+      "4x": 8,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:17:29.852Z",
+    "sticker": "G2 esports | Budapest 2025",
+    "stickerId": "9513",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:18:57.546Z",
+    "sticker": "The Mongolz | Budapest 2025",
+    "stickerId": "9501",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:20:22.740Z",
+    "sticker": "MOUZ | Budapest 2025",
+    "stickerId": "9505",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:21:52.314Z",
+    "sticker": "Vitality | Budapest 2025",
+    "stickerId": "9493",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:23:30.450Z",
+    "sticker": "Team Spirit | Budapest 2025",
+    "stickerId": "9509",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:24:52.520Z",
+    "sticker": "Falcons | Budapest 2025",
+    "stickerId": "9497",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-24T19:26:20.416Z",
+    "sticker": "FURIA | Budapest 2025",
+    "stickerId": "9489",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "blues",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:09:33.289Z",
+    "sticker": "The Mongolz (Holo) | Budapest 2025",
+    "stickerId": "9503",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 17,
+      "2x": 4,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:10:49.241Z",
+    "sticker": "G2 esports (Holo) | Budapest 2025",
+    "stickerId": "9515",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": null,
+      "2x": null,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:15:00.060Z",
+    "sticker": "StarLadder (Holo) | Budapest 2025",
+    "stickerId": "9619",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 36,
+      "2x": 1,
+      "3x": null,
+      "4x": null,
+      "5x": null
+    },
+    "error": "locator.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
+  },
+  {
+    "timestamp": "2025-11-26T13:16:16.342Z",
+    "sticker": "paiN Gaming (Holo) | Budapest 2025",
+    "stickerId": "9519",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 23,
+      "2x": 1,
+      "3x": 1,
+      "4x": null,
+      "5x": null
+    },
+    "error": "locator.textContent: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
+  },
+  {
+    "timestamp": "2025-11-26T13:33:35.401Z",
+    "sticker": "Team Spirit (Holo) | Budapest 2025",
+    "stickerId": "9511",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 12,
+      "2x": 1,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:35:09.564Z",
+    "sticker": "Vitality (Holo) | Budapest 2025",
+    "stickerId": "9495",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 12,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:36:52.015Z",
+    "sticker": "FURIA (Holo) | Budapest 2025",
+    "stickerId": "9491",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 15,
+      "2x": null,
+      "3x": 2,
+      "4x": 2,
+      "5x": null
+    },
+    "error": "locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
+  },
+  {
+    "timestamp": "2025-11-26T13:37:59.266Z",
+    "sticker": "Falcons (Holo) | Budapest 2025",
+    "stickerId": "9499",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "pink",
+    "applications": {
+      "1x": 17,
+      "2x": 3,
+      "3x": 3,
+      "4x": 2,
+      "5x": 1
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:39:23.583Z",
+    "sticker": "The Mongolz (Embroidered) | Budapest 2025",
+    "stickerId": "9502",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 90,
+      "2x": 5,
+      "3x": 4,
+      "4x": 2,
+      "5x": 1
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:40:30.461Z",
+    "sticker": "StarLadder (Embroidered) | Budapest 2025",
+    "stickerId": "9618",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 145,
+      "2x": 9,
+      "3x": 6,
+      "4x": 1,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:42:26.224Z",
+    "sticker": "G2 esports (Embroidered) | Budapest 2025",
+    "stickerId": "9514",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 69,
+      "2x": 4,
+      "3x": 2,
+      "4x": null,
+      "5x": null
+    },
+    "error": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "timestamp": "2025-11-26T13:44:41.886Z",
+    "sticker": "paiN Gaming (Embroidered) | Budapest 2025",
+    "stickerId": "9518",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 65,
+      "2x": 6,
+      "3x": null,
+      "4x": 2,
+      "5x": 1
+    },
+    "error": "locator.textContent: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
+  },
+  {
+    "timestamp": "2025-11-26T13:46:01.227Z",
+    "sticker": "MOUZ (Embroidered) | Budapest 2025",
+    "stickerId": "9506",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 91,
+      "2x": 7,
+      "3x": 2,
+      "4x": 1,
+      "5x": 1
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:47:38.078Z",
+    "sticker": "Team Spirit (Embroidered) | Budapest 2025",
+    "stickerId": "9510",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 102,
+      "2x": 8,
+      "3x": 3,
+      "4x": 1,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:49:04.298Z",
+    "sticker": "Vitality (Embroidered) | Budapest 2025",
+    "stickerId": "9494",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 69,
+      "2x": 3,
+      "3x": 1,
+      "4x": 1,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:50:29.444Z",
+    "sticker": "FURIA (Embroidered) | Budapest 2025",
+    "stickerId": "9490",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 79,
+      "2x": 5,
+      "3x": 3,
+      "4x": 2,
+      "5x": 1
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:51:35.763Z",
+    "sticker": "Falcons (Embroidered) | Budapest 2025",
+    "stickerId": "9498",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "purple",
+    "applications": {
+      "1x": 113,
+      "2x": 10,
+      "3x": 7,
+      "4x": 5,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:53:01.934Z",
+    "sticker": "StarLadder (Gold) | Budapest 2025",
+    "stickerId": "9620",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 29395,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:55:41.067Z",
+    "sticker": "paiN Gaming (Gold) | Budapest 2025",
+    "stickerId": "9520",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 3,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T13:58:04.017Z",
+    "sticker": "The Mongolz (Gold) | Budapest 2025",
+    "stickerId": "9504",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 3,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:00:07.247Z",
+    "sticker": "G2 esports (Gold) | Budapest 2025",
+    "stickerId": "9516",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 6,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:02:31.141Z",
+    "sticker": "MOUZ (Gold) | Budapest 2025",
+    "stickerId": "9508",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 1,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:12:37.822Z",
+    "sticker": "Team Spirit (Gold) | Budapest 2025",
+    "stickerId": "9512",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 3,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:15:02.087Z",
+    "sticker": "Vitality (Gold) | Budapest 2025",
+    "stickerId": "9496",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 2,
+      "2x": 1,
+      "3x": 1,
+      "4x": 1,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:16:29.983Z",
+    "sticker": "Falcons (Gold) | Budapest 2025",
+    "stickerId": "9500",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 2,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:19:08.160Z",
+    "sticker": "FURIA (Gold) | Budapest 2025",
+    "stickerId": "9492",
+    "collection": "Budapest 2025 Legends Sticker Capsule",
+    "rarity": "reds",
+    "applications": {
+      "1x": 2,
+      "2x": 0,
+      "3x": 0,
+      "4x": 0,
+      "5x": 0
+    }
+  }
+]

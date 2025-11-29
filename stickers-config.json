@@ -1,0 +1,641 @@
+{
+  "collections": {
+    "elemental_crafts": {
+      "blues": [
+        {
+          "name": "Scorch Loop",
+          "id": "7891",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsCG6CxNF5vuQnFyvqxxx3t2zcmImsJH6fZwBzDZolEOMDs0HqltzlP7y35QCPjoMWzDK-0H1N3cK4Rg/256fx256f"
+        },
+        {
+          "name": "Boom Detonation",
+          "id": "7892",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsC3-AzeFlue5ncD2kmlN-42mDzYmhI3iROFUgX5okQuICtBS8wdfvM-_jsQDW2t4RxXj63XsY8G81tPUSBUcH/256fx256f"
+        },
+        {
+          "name": "Boom Epicenter",
+          "id": "7893",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsC3-AzeFlue5ncD27hxgi_W_Sy9aueSiXbANzWcF1FOUJsha4mtLhP7zm4FaIiY4UySv7jyhP7np1o7FVMVv7Ax4/256fx256f.png"
+        },
+        {
+          "name": "Boom Blast",
+          "id": "7894",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsC3-AzeFlue5ncCa9kFMk42uEnN-qeC-UblQkXpBzF-cItBTul9WxNOPr5QPe2YlFniWq3y1A8G81tLApRpMz/256fx256f"
+        },
+        {
+          "name": "High Heat",
+          "id": "7885",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsCGuRzOtlj_V-QGfrkxhxsmnczNeocS_EawIiXpshRrZes0G7wNLhN7_lsVaIj4hHzy6tkGoXuV9He8lM/256fx256f"
+        },
+        {
+          "name": "Winding Scorch",
+          "id": "7888",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsCG6CxNFiuPNsSmflwE4h42_Un9modS-ROAB2D8ckQLIJ5BLuwde1Mrvr4FeNidgTxSX3kGoXuS0kJqyW/256fx256f"
+        },
+        {
+          "name": "Hydro Wave",
+          "id": "7924",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsGWaExPxJv-9sASq1lkx-6m_dy9-teX_DZ1ApCcR1RuYJ5hW6wIa2Ye22tlOP2opGzSjgznQeErtUseQ/256fx256f"
+        },
+        {
+          "name": "Scorch Loop (Reverse)",
+          "id": "7887",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsCG6CxNFip-4nTnjjkE8l4TmEn9agJyifOgd2A5d4QuZbsRLpm9yzN-6z7weN2I5MzDK-0H3Qe5Mirg/256fx256f"
+        },
+        {
+          "name": "Hydro Stream",
+          "id": "7923",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsGWaExPxJpOl7Siz9wEQi6m3RmdmvJXOTaA9xDMAiReFZ4xjuxtXnNOOw5wfb2ohMyiqqhjQJsHim8N8NHg/256fx256f"
+        },
+        {
+          "name": "Hot Rod Heat",
+          "id": "7886",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsCGuRzOtl_rZvTnDlzUh1t2zTydmtc37EbQYhDccmQOYL4RHrm9bvMe-w4QSKitpbjXKpHDUZ40c/256fx256f"
+        },
+        {
+          "name": "Hydro Geyser",
+          "id": "7922",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsGWaExPxJpPZmASuxxR8k4zuGztqgdS6SOA8pW8Z4RbQPukG7ldXgMe3h7wbbjt5AyXrgznQemztwppk/256fx256f"
+        },
+        {
+          "name": "Boom Trail",
+          "id": "7895",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebheKV9JeKsC3-AzeFlue5ncC-8gA9p62nVytf7JX6Ta1QnX8MhQbMDthS8ktzlMOrjtlDd2tpFyHqtjX4a6DErvbjqMUT31w/256fx256f"
+        }
+      ],
+      "pink": [
+        {
+          "name": "Bolt Strike (Foil)",
+          "id": "7901",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhbqtkLM-fB2CY1eB_vuZWWz68209_4WmDzYyqeC2ROFcjA5p3TLRetRmwl9XjPuiz41eKj49AzSr32CtXrnE8Wox2Gd0/256fx256f"
+        },
+        {
+          "name": "Bolt Charge (Foil)",
+          "id": "7902",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhbqtkLM-fB2CY1eB_vuZWWyGhkBhpsTzdwtusICmTaQVxA5ElRLQP5xG8koLgPr7m4FbZ2d9HzSSsin5B7TErvbjkBUWgqA/256fx256f"
+        },
+        {
+          "name": "Bolt Energy (Foil)",
+          "id": "7903",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhbqtkLM-fB2CY1eB_vuZWQCe22xh0tjnVyNr6dCnCbQciDJZ2Q-4Jsxi5lNTnNurq41bWjI8Wnnir3XtXrnE8197Wtac/256fx256f"
+        },
+        {
+          "name": "Winding Scorch (Foil)",
+          "id": "7904",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhbqtkLM-VB3WV_vp-ouRsAXDhxBl_sG6Dwtz7dymXbFQlWJtyF-4J4RS_xoHiNO_k7wyMgooQnCvgznQe71wX39U/256fx256f"
+        }
+      ],
+      "purple": [
+        {
+          "name": "Boom Detonation (Glitter)",
+          "id": "7897",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhb6hkNOSWHFiV2f56v_JgQCeMgQoo_W7Smd_8eXOeaAFxXJcjFLIOtxewktHgZOq0tlbe2dgXzH2ojysY7St1o7FVuh8jYMo/256fx256f"
+        },
+        {
+          "name": "Boom Epicenter (Glitter)",
+          "id": "7898",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhb6hkNOSWHFiV2f56v_JgQCeMgRU1tjjLzdesJ3OXPw52X5Z3Q-4D5kS_ltO2Prji71OL3d0Wyir8h3kcuilu5fFCD_Sg6ts1Bw/256fx256f"
+        },
+        {
+          "name": "Boom Blast (Glitter)",
+          "id": "7899",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhb6hkNOSWHFiV2f56v_JgQCeMmhMi_WSDn46hdnuVblVyD8B3Q7IJ5Ea5xIe1Nr7qtFGMjd9BzXmoiHhI7C51o7FVZHsK4gg/256fx256f"
+        },
+        {
+          "name": "Boom Trail (Glitter)",
+          "id": "7900",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhb6hkNOSWHFiV2f56v_JgQCeMkxIyoXPSyt2pdirFaQQjXsF0R-4JukS5mtLuP7nh4FaN34NGmyyoiSwf63pu_a9cBlU2l3LX/256fx256f"
+        },
+        {
+          "name": "Rainbow Route (Holo)",
+          "id": "7896",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhYKthL8-BD26ew-Fhj_V7TiC_2xkh5mqHytqgdS7Faw4iDMF1QeYJtxGxkNK2NrnrtQDaj98UnyX_j35XrnE8dkJAeg8/256fx256f"
+        }
+      ],
+      "reds": [
+        {
+          "name": "Ruby Wave (Lenticular)",
+          "id": "7926",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhZKFjNPmQG2uR09F0vO5mSxanghJpsj_Tn9n9JS7GaQQnD5QjTbQJuxDswd3vNL_i7gzb3o8Rn3_33C4f6zErvbg5IwC97A/256fx256f"
+        },
+        {
+          "name": "Ruby Stream (Lenticular)",
+          "id": "7925",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjx5lzqRBPln5rf_jBa6ebhZKFjNPmQG2uR09F0vO5mSxa8mxhp5DvVy9f8di6TbgMkWJEhQ-UNsUa7w4CxM-LiswbbjYlNmSv-jC8auzErvbh9iAra4Q/256fx256f"
+        }
+      ]
+    },
+    "Budapest 2025 Legends Sticker Capsule": {
+      "blues": [
+        {
+          "name": "StarLadder | Budapest 2025",
+          "id": "9617",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-BezQEykz5e5-3RaufD6PvJseKGVXGXGxLgm5-c-Sn-yl0x14GzRnI6hbzvJOWz0bJU4/256fx256f"
+        },
+        {
+          "name": "paiN Gaming | Budapest 2025 ",
+          "id": "9517",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65Ib95Be1FB-gzcTj_HoLv6r-OfI8dqSWC2XGkLgn5uQ_GnrgwRsm5Gjcy4yhbzvJOUZ8oop3/256fx256f"
+        },
+        {
+          "name": "G2 esports | Budapest 2025",
+          "id": "9513",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM689W6vFzkQhmpn87jq3BZ7PCvP_c0IqiRCmTAkOog57hsGXvhlEh362jcysHpLywr1Xv1rA/256fx256f"
+        },
+        {
+          "name": "The Mongolz | Budapest 2025",
+          "id": "9501",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Ynz8BfiE0Wmzc_irXtZuqf9OvA4dvTKXmXGw-pw6bBoSXrnlEUl5jvVno6hbzvJOS2Sp0M0/256fx256f"
+        },
+        {
+          "name": "MOUZ | Budapest 2025",
+          "id": "9505",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Yjh8Be1EEuin8PlpScJuKf_PadsIqXHC2OTk-sn4OVrG3zjwkQh5WSGm9r9bzvJOZGRzf29/256fx256f"
+        },
+        {
+          "name": "Vitality | Budapest 2025",
+          "id": "9493",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64o7g6xfiRE6jzJTi-yMI7vH2avBpJqbGX2LJkbsk4-U_HXDmwUwktm-GnN-rbzvJOWS_p3-9/256fx256f"
+        },
+        {
+          "name": "Team Spirit | Budapest 2025",
+          "id": "9509",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655f9-BfiQE6inM-5-HsCufH2OqA6JPLDXDfHke1w6eA7HXm3wkUk6m_dydqgbzvJOfKWSVNo/256fx256f"
+        },
+        {
+          "name": "Falcons | Budapest 2025",
+          "id": "9497",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68ob4pAG_EU7zzsPlrSNf7Kr_a_FodqjEDzSUx7h157FsHnrrzE8j42yByoy3MSXAbXJwh7E/256fx256f"
+        },
+        {
+          "name": "FURIA | Budapest 2025",
+          "id": "9489",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68pLm4xfmE0qjzMfm-3cDu6WtO6A9caLLXjeVlb4v4LNqTi_mxh5ysG2Eyd6vbzvJOR9Yz89D/256fx256f"
+        }
+      ],
+      "pink": [
+        {
+          "name": "The Mongolz (Holo) | Budapest 2025",
+          "id": "9503",
+          "imageUrl": "https://img.clash.gg/stash/stickers-the-mongolz-holo-budapest-2025"
+        },
+        {
+          "name": "G2 esports (Holo) | Budapest 2025",
+          "id": "9515",
+          "imageUrl": "https://img.clash.gg/stash/stickers-g-2-esports-holo-budapest-2025"
+        },
+        {
+          "name": "StarLadder (Holo) | Budapest 2025",
+          "id": "9619",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbvThH-0MawqXpa7qH-OvRvcKKRVjKTl70k6LZoG33glh936mjcmd-rd3iSagQ-Sswnp24Xzcg/256fx256f"
+        },
+        {
+          "name": "paiN Gaming (Holo) | Budapest 2025",
+          "id": "9519",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65Ib95GbvThH-0MTmqXQC6vT2O6E7d6DLXGWUwLt0trFqTnDmwBh_sWnWz4qtcHmSOAA-SswnI48laQc/256fx256f"
+        },
+        {
+          "name": "MOUZ (Holo) | Budapest 2025",
+          "id": "9507",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Yjh8GbvThH-0MO0_nYMvqH8Of01efTADzeSlL0h4LhvHH2xwh4l6mXcytqqdHmWaVA-SswnPJU3r6U/256fx256f"
+        },
+        {
+          "name": "Team Spirit (Holo) | Budapest 2025",
+          "id": "9511",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655f9-GbvThH-0JCwriYPu6urOvM5c6LGCDHHmbYkseNoHn-wkEgk6zyGmN6ocX-Ta1c-Sswn43hSMMU/256fx256f"
+        },
+        {
+          "name": "Vitality (Holo) | Budapest 2025",
+          "id": "9495",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64o7g62bvThH-0JTmqCEC6qr3P_I-ePbDWmGVwr4m6bRrHXvrw0t04W3cyN77di6TZ1U-SswnWwN4_1g/256fx256f"
+        },
+        {
+          "name": "FURIA (Holo) | Budapest 2025",
+          "id": "9491",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68pLm42bvThH-0Jfh-yBa6varP_E7dKWRXjDBmbxy5bk9Gn3mxkgisjyGyNeqdnKWP1M-SswnpMm_I34/256fx256f"
+        },
+        {
+          "name": "Falcons (Holo) | Budapest 2025",
+          "id": "9499",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68ob41VHoTRK_yc_kr3EP7PSvbqFvI6HDDTTEwrwhtLg5Gy_llE4i4GzUz4mseHqSOxhgVMUhJOsS6A/256fx256f"
+        }
+      ],
+      "purple": [
+        {
+          "name": "The Mongolz (Embroidered) | Budapest 2025",
+          "id": "9502",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Ynz8GbiTB_jkZ_k-DBe67ysOac-dKPKXz6Uwrl1tbBoHH2wkUtxtWuByN-teXmWbVByXsF5ROJbrFDmxb72Abt-/256fx256f"
+        },
+        {
+          "name": "StarLadder (Embroidered) | Budapest 2025",
+          "id": "9618",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbiTB_jkZ_k-DBe67yrOPc-I6bKWjTIx-xy4rBsSnnkkUp-62zVm939Iy-QPQByW5UkRLYKrFDmxWOKcwGF/256fx256f"
+        },
+        {
+          "name": "G2 esports (Embroidered) | Budapest 2025",
+          "id": "9514",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM689XL71TlUxL4mpPy-CYVuKOvP6ZoIaeXCjKSlLYk4LM8Hyixw09ztWqAyNr8dXqSPVcgDZJ3EflK7EefcR02tA/256fx256f"
+        },
+        {
+          "name": "paiN Gaming (Embroidered) | Budapest 2025",
+          "id": "9518",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65Ib95GbiTB_jkZ_k-DBe67z7afFpc6LCXjOTkroi6LBoGH_jxxh-smXczNn7dX2QPwYmCpslRLZcrFDmxfqZ19oz/256fx256f"
+        },
+        {
+          "name": "MOUZ (Embroidered) | Budapest 2025",
+          "id": "9506",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Yjh8GbiTB_jkZ_k-DBe67ytPPE0cKeWXD_FkewitOdvGCzhxkV1t22Dy9j4cHPEPwAjWZpwTOMMrFDmxeeJjebb/256fx256f"
+        },
+        {
+          "name": "Team Spirit (Embroidered) | Budapest 2025",
+          "id": "9510",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655f9-GbiTB_jkZ_k-DBe67z8O_E7dfPACDaSmOxz5uNoS3CxkUVx4WqGyo2hI3Kfb1UhWMRwQLICrFDmxcNQCgRd/256fx256f"
+        },
+        {
+          "name": "Vitality (Embroidered) | Budapest 2025",
+          "id": "9494",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64o7g62biTB_jkZ_k-DBe67yrbf1rdPbBCGHDw74h4rA8TSrlk08ht2uAy43_I3nBZgEjApFyELMMrFDmxZobiGYq/256fx256f"
+        },
+        {
+          "name": "FURIA (Embroidered) | Budapest 2025",
+          "id": "9490",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68pLm42biTB_jkZ_k-DBe67ysa_M5eaKQXDDBlegvs7U_GXHrxBl-tWvUnt_6dS_GP1cjW8B0R-9YrFDmxRtLojlY/256fx256f"
+        },
+        {
+          "name": "Falcons (Embroidered) | Budapest 2025",
+          "id": "9498",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68ob41VzqQw_-l5Ll7ydfofP8OvY8JKKSVmLHxL4jseBqGX_qzUwl5G7WyYmtJ33BaFQoXMAjQuQU8k7viUtvh9w/256fx256f"
+        }
+      ],
+      "reds": [
+        {
+          "name": "StarLadder (Gold) | Budapest 2025",
+          "id": "9620",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbgThH10M_mrHACufP_OKc1dqGWDGPAmbsg47RqGn_hkx5w5GvWw92sJSmWbgc-Sswny6ADW94/256fx256f"
+        },
+        {
+          "name": "paiN Gaming (Gold) | Budapest 2025",
+          "id": "9520",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65Ib95GbgThH10MC2qXQK7PCra_dpdabCWGHGk-8usbE-SX_mk0xz4mqEwt6gdyqQOgI-SswnOw3ySts/256fx256f"
+        },
+        {
+          "name": "The Mongolz (Gold) | Budapest 2025",
+          "id": "9504",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Ynz8GbgThH10MKyrSMKt6f_O_1pdvaSXGSVkLcitrAxSy_jkUokt2yEmNz8c3qQbFc-SswngLGhoYY/256fx256f"
+        },
+        {
+          "name": "G2 esports (Gold) | Budapest 2025",
+          "id": "9516",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM689XL7VbrRVPyy8-w-CQJ7PH2O6ZoIqDBC2GSk7ovsbY6HyvqxUlz4z7Tztj9eS6RcEZ-XYtLAfuv/256fx256f"
+        },
+        {
+          "name": "MOUZ (Gold) | Budapest 2025",
+          "id": "9508",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Yjh8GbgThH10M-z-XsOvPeqOKE7d6fDVj_HlbYm57k_HyrnwBtz5DiEmI6qdCmfb1U-SswnfwblG3Y/256fx256f"
+        },
+        {
+          "name": "Team Spirit (Gold) | Budapest 2025",
+          "id": "9512",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655f9-GbgThH10JC2qnoCuKSsOKJocPXHWj6SlrwhsuI7HX2xxEkm42jSzIqrdX3GOFU-SswnA9jkXj4/256fx256f"
+        },
+        {
+          "name": "Vitality (Gold) | Budapest 2025",
+          "id": "9496",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64o7g62bgThH10MTlqHZZ6vOtO_U7d6bCDDSUkLkj5eM6Gnmwl01162qAyomtdHzBaAI-SswnYUUem-0/256fx256f"
+        },
+        {
+          "name": "Falcons (Gold) | Budapest 2025",
+          "id": "9500",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68ob41V7oTRm_x8Cy-yEOuPf9bqZsJaDKWmTEmOx3tuc6SXC1wBlw62zQw9f8dC7EbRhgVMVtaAazvQ/256fx256f"
+        },
+        {
+          "name": "FURIA (Gold) | Budapest 2025",
+          "id": "9492",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM68pLm42bgThH10JTm_3EPvqWtP6U4c_TGVjKTl-sn5rA5HXGxkBl352qDmNuoeH2SZlQ-Sswn16KqI3A/256fx256f"
+        }
+      ]
+    },
+    "character_crafts": {
+      "blues": [
+        {
+          "name": "Flex",
+          "id": "7905",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_GBA1iWzetu_rVoGnyxkx5_tmnQn4v9JHqSPAMnXJokQ-MKtBe9koLgZbjl5Vbcit9bjXKpJWOHIS0/256fx256f"
+        },
+        {
+          "name": "Ribbon Tie",
+          "id": "7911",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-KaDGWfz6B15LYxSi_lzEkm6mvVno79eXORbFV0CsZ4QOUN5xTpwIXmYu3gslCKlcsbmgsXngyA/256fx256f"
+        },
+        {
+          "name": "Clown Nose",
+          "id": "7906",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_OfAXCe_uB5o-QnG323kRx3sGrSzt2hJyqRbwYjDMNzFuRZt0awkNTvP7y07gXYi4JMxDK-0H01e3onUQ/256fx256f"
+        },
+        {
+          "name": "Chompers",
+          "id": "4580",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-ObD3Wb_uN5pfVhAS3ixkl_4WTWyI79d3jGPAZ1XJAhR-EOsBC6kN22Yb-34w3cjYoXnCjgznQeFtpYvFU/256fx256f"
+        },
+        {
+          "name": "From The Deep",
+          "id": "4647",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-SWAHORwuJz_uc6S3rmw0kk4GvRztb7dC3EaQJ0DcBwRLEKsRbux9zmP-_n51Tci49bjXKpy9YYVZU/256fx256f"
+        },
+        {
+          "name": "Blinky",
+          "id": "4577",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-eaAGyJ_utvtfInFn7ilEhz4T6HzIz7eH2TPAEiApZ5ROUOs0Htw9fvZb_q4wLW2t9EzjK-0H0O1ssaVw/256fx256f"
+        },
+        {
+          "name": "Quick Peek",
+          "id": "7909",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_ecAWCc2NFzqeRWXCSymRFp5zyGz9mhc32faAAmA8F4QrFYuka-x9K0Y-uz4ALc39gTmSqriCkcuDErvbglz6s7TA/256fx256f"
+        },
+        {
+          "name": "Taste Bud",
+          "id": "7912",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-ScAGCFxKAntrk8HS_hwBght23SydmueSifPFAiW8ZyEbFYtxftl4LmYe7h4FCIlcsbmhOymclS/256fx256f"
+        },
+        {
+          "name": "Clown Wig",
+          "id": "7907",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_OfAXCe_vl_t689F3vjzE9z4j6GmYuudS_GOA4nX5Z0F-ED5kLuktbuNLzg5g2PjI9D02yg2QlOcklc/256fx256f"
+        },
+        {
+          "name": "Fly High",
+          "id": "4590",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-eaAGCDj7xz6bQ_GHm3wR8k5GmAytz8d3KUPVR0WZJ4Qudbshi5kNDgMenn5A3Ay9USUiaWmK0/256fx256f"
+        },
+        {
+          "name": "Glare",
+          "id": "4648",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_WKCynCmL1zsedqH3HhwRt3sW-Gm9egdCrCOgYjW5QlTOYNtkHuldzlZejm-UWA3EqO61YC/256fx256f"
+        },
+        {
+          "name": "XD",
+          "id": "7910",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_2cG3OYj7smteBrSivhzE13sTvQy9j6JXPCbAZzDJN5ELQJtkLqwYHjP-_js1TAy9USelZAEac/256fx256f"
+        },
+        {
+          "name": "Strike A Pose",
+          "id": "7927",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_2SAmKvwOB_veRWSSiwkFNztj6Eyt-hInjFaAV2X5RzQbRZ4BDqk9W1N-y25wzY3opFzCit2ChM8G81tKsLVTqT/256fx256f"
+        },
+        {
+          "name": "Lefty (T)",
+          "id": "7879",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H-SsAmKW1dF-se9tAXC3wUx-tmnWmYn8JH-UbQdyX5RyRuJZu0XskILmMbnlsQLa2Y0RxH7gznQeQnd5QAA/256fx256f"
+        },
+        {
+          "name": "Lefty (CT)",
+          "id": "4698",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoOKveKF_H_OHMWuVx_pJuOBnS2fqxB92sTiEmNj8dCieZgBzA5t2RLVctBe5kNDnN7-xtFbWgt4WzS6skGoXue2D92LE/256fx256f"
+        }
+      ],
+      "purples": [
+        {
+          "name": "Taste Buddy (Holo)",
+          "id": "7916",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPqhZKtSNP-dCXKVj78n6LE7HS3mwEkmsTmDztz8eXqUaAd2DZB4RbQPukW4m9PuN-7j5lHAy9USB3QWRGQ/256fx256f"
+        },
+        {
+          "name": "Hypnoteyes (Holo)",
+          "id": "7921",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoP6rZrBkI-WfD3WvwOBxovhWSjC2hlN2smvSyNqpeXuWbg4oC8R2Q-EPt0Ppk4XhNbvn51TW34MXzCj3iixN8G81tFVqqb7u/256fx256f"
+        },
+        {
+          "name": "Kawaii Eyes (Glitter)",
+          "id": "7913",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPWiYbB5JeKsBWaHwOd_j-RwSjr9zER04WuEzdavJ3ySZg8oCpdzQ-Vcskbrl4XhMbm04VTZ2N9Nznr7jDQJsHi0uU4vMQ/256fx256f"
+        },
+        {
+          "name": "Say Cheese (Holo)",
+          "id": "7915",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPqhZKtSLf-GGm_ewLd14eQwGn7ikBwmsTjcnIqpciiWOw8mX5AhEeUIuxKxxIKzM-2w4hue1dwDbV6e4w/256fx256f"
+        },
+        {
+          "name": "From The Deep (Glitter)",
+          "id": "7914",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPWiYbB5JeKsGmKe1e91vOQnF36wlEp3tWrXzI6rJXuSaw4jW5V5E-VZtBi7xoW2MO3itVHYgo9NzjK-0H1iJF021w/256fx256f"
+        }
+      ],
+      "pinks": [
+        {
+          "name": "Red Shades (Foil)",
+          "id": "7880",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPShYahSM-WdCWuR0v1zo69tTX-ywEQi5Gjdwtz8cSnBPQchA5JwQLUPu0G6kNS0MLni4APfiY9C02yg2bRWnsHx/256fx256f"
+        },
+        {
+          "name": "Gold Teef (Foil)",
+          "id": "7917",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPShYahSLf-GGm_ewr8v6eM6SX23wBwjsj_SyY76eSjFaAR1A8YiF7YNsxO9x9PnMrmwsRue1dydB_NxlQ/256fx256f"
+        },
+        {
+          "name": "Mustachio (Foil)",
+          "id": "7881",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoPShYahSLeWAGmaTyes46eVqGX-wzU8j42_Tm9-qd3LFZlByWcd4QOZetxPumtflP77g4lbeiZUFk3sS_ps8MA/256fx256f"
+        }
+      ],
+      "reds": [
+        {
+          "name": "Googly Eye (Lenticular)",
+          "id": "7919",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoP6rZrBkI-WfD3WvxuF5t-1wcCyqkFNy6mqGmNeqcCiePw8hXsBxFLRZsxLqkNDuM-7nsVGK34NEnC7_jylK8G81tGuidRkW/256fx256f"
+        },
+        {
+          "name": "Side Eyes (Lenticular)",
+          "id": "7918",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMmuOHaC619h7cjn_lDkShjjoZXy_CRPoP6rZrBkI-WfD3WvwuZztepwcCyqkA5p5mTRwt2vdHzFbgcoDMBzQe5btxOwwYHiP-Pq7leMid4QyiWq2CtK5jErvbhK-Cn8PA/256fx256f"
+        }
+      ]
+    },
+    "Budapest 2025 Challengers Sticker Capsule": {
+      "blues": [
+        {
+          "name": "TYLOO | Budapest 2025",
+          "id": "9541",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64J74pA-_FESnmJLhqCYM6_b_bKA7IfWWDGHEkughtOBsHCyykU1y6mqEzo23MSXAnbYRYGE/256fx256f"
+        },
+        {
+          "name": "Astralis | Budapest 2025",
+          "id": "9537",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZTg-BewExuhzc60qnJavqeqPvJpc_GXX2TCl7cg5bc5Fi3qzBlytWTUzt-sbzvJOe-eXxU1/256fx256f"
+        },
+        {
+          "name": "Aurora | Budapest 2025",
+          "id": "9521",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZLm6xfkEk-gyMfjqXANvKf-bvw7I_WXDDTIw70lsrNoGXrgxxkj4GXcnoqubzvJOfgwWAcu/256fx256f"
+        },
+        {
+          "name": "Natus Vincere | Budapest 2025",
+          "id": "9525",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-obi4xe1Qh_wzJXmpSFf7fOtOPxvJfSSCGOSl7ou47MwFy3nwEVy42jXm939bzvJOU-a_IW3/256fx256f"
+        },
+        {
+          "name": "Passion UA | Budapest 2025",
+          "id": "9549",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65JT6_xewRU2nm8fl_3Rauar8bPQ5daTKCzaWmO1zs7JsGi2xkU5x42qGzNv6bzvJOT_7tpNU/256fx256f"
+        },
+        {
+          "name": "3DMAX | Budapest 2025",
+          "id": "9533",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6p4P5pAyzF06incPhr3YOvvH2PaFpI6GQVzXDmegv4OcxFi3llB5_5z7SnNm3MSXA29Jdr2g/256fx256f"
+        },
+        {
+          "name": "Team Liquid | Budapest 2025",
+          "id": "9529",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-I7lpAqxQ0ugn8a5qXNdufT3bPM1I6XDDDLBleh357c9HCy1l04ktzmDmda3MSXAC1xrtaA/256fx256f"
+        },
+        {
+          "name": "MIBR | Budapest 2025",
+          "id": "9545",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Y72-Be-REqozMCyqCQM66b9a6E4dKGSVjCWwr9y4Lc_Hi3nxhx3tW_Qmd_9bzvJOeUp1Tla/256fx256f"
+        }
+      ],
+      "pinks": [
+        {
+          "name": "TYLOO (Holo) | Budapest 2025",
+          "id": "9543",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64J741VHoTRK_ycO5rnsL7Pf6OKc8cKSRVzHBx-wjs-VoGnDhlEt36j6Hnomqdy3DZhhgVMV3GCGK2Q/256fx256f"
+        },
+        {
+          "name": "Team Liquid (Holo) | Budapest 2025",
+          "id": "9531",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-I7l1VHoTRK_y5Pl_3Rfu6avP_NocvbDCzOSk79z4rRoS3jqwkpz5W6Bm9ypeXrDaBhgVMWFXb1XOw/256fx256f"
+        },
+        {
+          "name": "Passion UA (Holo) | Budapest 2025",
+          "id": "9551",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65JT6_2bvThH-0JS1_icCuqb9a_07JPLFCmKTkewk6Lk9Sny2xRsmtT6Gz42rdHnCOgA-SswnCJA1WTY/256fx256f"
+        },
+        {
+          "name": "Astralis (Holo) | Budapest 2025",
+          "id": "9539",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZTg-GbvThH-0MO3qnEJvKD8bfNuI6WQXD-Rl7pztbNrHXrilklx4jjdmNigeHyfa1c-SswnEOayshU/256fx256f"
+        },
+        {
+          "name": "Aurora (Holo) | Budapest 2025",
+          "id": "9523",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZLm62bvThH-0MKzrXJY66OtbPI4caKSWzTIwLYi57RqGirgwhklsW_Vzdz6JymfaFI-SswnNdzh8WI/256fx256f"
+        },
+        {
+          "name": "3DMAX (Holo) | Budapest 2025",
+          "id": "9535",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6p4P51VHoTRK_x5Dk-CcN6vSvOvY0c6bDXzXHkrpz6LY6HCq3lER-4jzSyIn_dnzDPBhgVMUsCyU1ng/256fx256f"
+        },
+        {
+          "name": "Natus Vincere (Holo) | Budapest 2025",
+          "id": "9527",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-obi42bvThH-0MG1qHddu_H-MKVvI6eQCjKRk7536Lc9SnDilEgh52XRn9f7dn_DPVA-Sswnn-4MYkI/256fx256f"
+        },
+        {
+          "name": "MIBR (Holo) | Budapest 2025",
+          "id": "9547",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Y72-GbvThH-0M_jqyRZv6T6avc1dvbCWWbAxb8h5-QwSSu2xk534j6Bz42uJ3qQaAE-Sswn9g4jP5M/256fx256f"
+        },
+        {
+          "name": "StarLadder (Holo) | Budapest 2025",
+          "id": "9619",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbvThH-0MawqXpa7qH-OvRvcKKRVjKTl70k6LZoG33glh936mjcmd-rd3iSagQ-Sswnp24Xzcg/256fx256f"
+        }
+      ],
+      "purples": [
+        {
+          "name": "TYLOO (Embroidered) | Budapest 2025",
+          "id": "9542",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64J741VzqQw_-l5Ll7ydfofP3bfZoeKORXz6Tk7h0teQ8HH7gwkxy52_dzYr4dnzBaQV0D8Z4R7MU8k7vfvXvYP8/256fx256f"
+        },
+        {
+          "name": "Natus Vincere (Embroidered) | Budapest 2025",
+          "id": "9526",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-obi42biTB_jkZ_k-DBe67z8a6U4dKSVWzLIkOh14bBqTSiwkEtx4mvUnoypcH2XbgIpCMB4RO9ZrFDmxaMURHbq/256fx256f"
+        },
+        {
+          "name": "Astralis (Embroidered) | Budapest 2025",
+          "id": "9538",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZTg-GbiTB_jkZ_k-DBe67z8PaA0dabLDWPEl74v47A9Sy2wxkol62XdwtiteCqTbFB2XsZxF-8DrFDmxV38sQKF/256fx256f"
+        },
+        {
+          "name": "Aurora (Embroidered) | Budapest 2025",
+          "id": "9522",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZLm62biTB_jkZ_k-DBe67z2OqU8eKGWDGaTleog6bE5F3zlzUQj6z6EzNegeXKQbANxCJByROMJrFDmxW4bFdHT/256fx256f"
+        },
+        {
+          "name": "Team Liquid (Embroidered) | Budapest 2025",
+          "id": "9530",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-I7l1VzqQw_-l5Ll7ydfofH_bPw5IvHLCDSVkbsmsrY6GnC1wEwjtWmBztmvJy2SawVzC5dxRrEU8k7v14te0AY/256fx256f"
+        },
+        {
+          "name": "Passion UA (Embroidered) | Budapest 2025",
+          "id": "9550",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65JT6_2biTB_jkZ_k-DBe67yvMKI9ePXAC2LJl78ks7M9S3vglExxtzjQwtn_cXOSbgUnWJZwR-BbrFDmxcfVDg0Q/256fx256f"
+        },
+        {
+          "name": "3DMAX (Embroidered) | Budapest 2025",
+          "id": "9534",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6p4P51VzqQw_-l5Ll7ydfofT6O_E5dPbBCj7Jkr8vsuQ7HnyxkUhy4W3Xzd_8dC_BagdzWZV1TbEU8k7vGhnphlg/256fx256f"
+        },
+        {
+          "name": "MIBR (Embroidered) | Budapest 2025",
+          "id": "9546",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Y72-GbiTB_jkZ_k-DBe67yvPPQ_JKXLXmWUlesu6bQ-H3Hmw09-5z7Sztv7dCrFaAcpDpUhEOQMrFDmxeOuoaAI/256fx256f"
+        },
+        {
+          "name": "StarLadder (Embroidered) | Budapest 2025",
+          "id": "9618",
+          "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbiTB_jkZ_k-DBe67yrOPc-I6bKWjTIx-xy4rBsSnnkkUp-62zVm939Iy-QPQByW5UkRLYKrFDmxWOKcwGF/256fx256f"
+        }
+      ],
+      "reds": [
+        [
+          {
+            "name": "TYLOO (Gold) | Budapest 2025",
+            "id": "9544",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM64J741V7oTRm_n8G1_HcP7aqvP6Foc6XEVjHDxegutbY8Hyjlk0kk4jvQztugdHrFPxhgVMWi00TNNg/256fx256f"
+          },
+          {
+            "name": "Natus Vincere (Gold) | Budapest 2025",
+            "id": "9528",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-obi42bgThH10MCwpSAC7KOraaBpIfTCDD7Fkegv4rJsHy_iwE1y52yEy4r_cn6SOA4-SswnA0f-ILU/256fx256f"
+          },
+          {
+            "name": "Team Liquid (Gold) | Budapest 2025",
+            "id": "9532",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-I7l1V7oTRm_nZe4_yFZ7KqoO_Q9IqTBXWXJwusjtbA7Sy3mk0Uk4mTWztypICmTbBhgVMV_1PX8VQ/256fx256f"
+          },
+          {
+            "name": "Aurora (Gold) | Budapest 2025",
+            "id": "9524",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZLm62bgThH10MC3qncMtvf9afI_I6LHD2KSlusl6ecwTn_lwEt34Djcyt-gIH6fagE-SswnA2zbmG0/256fx256f"
+          },
+          {
+            "name": "Astralis (Gold) | Budapest 2025",
+            "id": "9540",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM69ZTg-GbgThH10MTirSBev6StPPw-JPTHDz6SmbYntLI-TnCwwRwht27Smdmpdi2RbVU-SswnCEBJROk/256fx256f"
+          },
+          {
+            "name": "3DMAX (Gold) | Budapest 2025",
+            "id": "9536",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6p4P51V7oTRm_yMHlpScJuKP4baBreaLHWmTGlOsltrU-FnGwwEVxtTzUztf6cimSPxhgVMUvEvZyDA/256fx256f"
+          },
+          {
+            "name": "Passion UA (Gold) | Budapest 2025",
+            "id": "9552",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM65JT6_2bgThH10MLkrSQC7PD8baJsdqKWDWWRl-x3s7Q7THG3kRt_tz7Tw9ioc3zFPVU-SswnPUp2b1o/256fx256f"
+          },
+          {
+            "name": "MIBR (Gold) | Budapest 2025",
+            "id": "9548",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM6-Y72-GbgThH10JSx-3tY7vevP6c0IanCCzfCx7gn47c9H3jrwx5xtW3SzIv4I3qXalQ-Sswn_gMK8OQ/256fx256f"
+          },
+          {
+            "name": "StarLadder (Gold) | Budapest 2025",
+            "id": "9620",
+            "imageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjMi0MSnHtwM655P1-GbgThH10M_mrHACufP_OKc1dqGWDGPAmbsg47RqGn_hkx5w5GvWw92sJSmWbgc-Sswny6ADW94/256fx256f"
+          }
+        ]
+      ]
+    }
+  }
+}
