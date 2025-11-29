@@ -3,10 +3,10 @@ const fs = require("fs");
 
 // Configuration
 const AUTH_FILE = "auth_2.json";
-const INITIAL_COOLDOWN = 180000; // 3 minutes in milliseconds
+const INITIAL_COOLDOWN = 360000; // 6 minutes in milliseconds
 const MAX_COOLDOWN = 1800000; // 30 minutes max
 const COOLDOWN_MULTIPLIER = 1.5; // Increase cooldown by 50% each time
-const REQUEST_DELAY = 8000; // 5 seconds between requests (increased from 3)
+const REQUEST_DELAY = 8000; // 8 seconds between requests (increased from 3)
 const BATCH_SIZE = 20;
 const BATCH_SLEEP_DURATION = 180000; // 3 minutes in milliseconds
 
@@ -112,7 +112,7 @@ async function isRateLimited(page, error) {
       '.header:has-text("Failed to fetch items")',
       '.sub-text:has-text("making a lot of searches")',
       'span:has-text("Woah, you\'ve been making a lot of searches")',
-      'mat-icon:has-text("error")'
+      'mat-icon:has-text("error")',
     ];
 
     for (const selector of rateLimitIndicators) {
@@ -133,7 +133,7 @@ async function isRateLimited(page, error) {
 async function isNoResults(page) {
   // Try to detect the "Found No Items" message directly
   const foundNoItems = await page
-    .locator('text=Found No Items')
+    .locator("text=Found No Items")
     .isVisible({ timeout: 2000 })
     .catch(() => false);
 
@@ -141,7 +141,7 @@ async function isNoResults(page) {
 
   // Backup check: detect the sub-text
   const impossibleText = await page
-    .locator('text=impossible')
+    .locator("text=impossible")
     .isVisible({ timeout: 2000 })
     .catch(() => false);
 
@@ -156,7 +156,9 @@ async function handleRateLimit(browser, context) {
 
   console.log(`\n⚠️  RATE LIMIT DETECTED (Attempt #${consecutiveRateLimits})`);
   console.log(`⚠️  CSFloat is rate limiting by IP address, not by account`);
-  console.log(`⏰ Current cooldown: ${Math.round(currentCooldown / 1000)} seconds`);
+  console.log(
+    `⏰ Current cooldown: ${Math.round(currentCooldown / 1000)} seconds`
+  );
 
   // Close current context
   await context.close();
@@ -178,11 +180,16 @@ async function handleRateLimit(browser, context) {
   clearInterval(countdownInterval);
 
   // Increase cooldown for next time (exponential backoff)
-  currentCooldown = Math.min(currentCooldown * COOLDOWN_MULTIPLIER, MAX_COOLDOWN);
+  currentCooldown = Math.min(
+    currentCooldown * COOLDOWN_MULTIPLIER,
+    MAX_COOLDOWN
+  );
 
   console.log(`✓ Cooldown complete`);
   if (consecutiveRateLimits > 2) {
-    console.log(`⚠️  Next cooldown will be: ${Math.round(currentCooldown / 1000)} seconds`);
+    console.log(
+      `⚠️  Next cooldown will be: ${Math.round(currentCooldown / 1000)} seconds`
+    );
   }
 
   // Restart browser session
@@ -200,7 +207,6 @@ async function handleRateLimit(browser, context) {
 
   return { browser: newBrowser, context: newContext, page: newPage };
 }
-
 
 // Main scraping function with account rotation
 async function scrapeCSFloat(stickers, maxApplications = 5) {
@@ -220,7 +226,7 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
   const state = {
     browser: null,
     context: null,
-    page: null
+    page: null,
   };
 
   try {
@@ -244,14 +250,19 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
       console.log("\n--- Phase 1: Scraping New Stickers ---");
       for (let i = 0; i < remainingStickers.length; i++) {
         const sticker = remainingStickers[i];
-        console.log(`[${progress.completedStickers.length + 1}/${stickers.length}]`);
+        console.log(
+          `[${progress.completedStickers.length + 1}/${stickers.length}]`
+        );
 
         // Scrape all application counts (1x to 5x)
-        const appCounts = Array.from({ length: maxApplications }, (_, i) => i + 1);
+        const appCounts = Array.from(
+          { length: maxApplications },
+          (_, i) => i + 1
+        );
 
         // We need to handle the retry logic for rate limits inside the loop properly.
         // Since I refactored processSticker to take a list, let's use that.
-        // But wait, the original code had retry logic inside the loop. 
+        // But wait, the original code had retry logic inside the loop.
         // My processSticker implementation above has a flaw: it doesn't retry the current item on rate limit properly because it's a for..of loop.
         // Let's fix that by calling a robust version of processSticker or handling it here.
         // Actually, let's just use a robust loop inside processSticker.
@@ -270,9 +281,15 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
         }
 
         // Sleep after every BATCH_SIZE stickers
-        if ((i + 1) % BATCH_SIZE === 0 && (i + 1) < remainingStickers.length) {
-          console.log(`\n💤 Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds after ${BATCH_SIZE} stickers...`);
-          await new Promise((resolve) => setTimeout(resolve, BATCH_SLEEP_DURATION));
+        if ((i + 1) % BATCH_SIZE === 0 && i + 1 < remainingStickers.length) {
+          console.log(
+            `\n💤 Sleeping for ${
+              BATCH_SLEEP_DURATION / 1000
+            } seconds after ${BATCH_SIZE} stickers...`
+          );
+          await new Promise((resolve) =>
+            setTimeout(resolve, BATCH_SLEEP_DURATION)
+          );
           console.log("✓ Resuming scrape...\n");
         }
       }
@@ -291,7 +308,7 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
         for (const [app, count] of Object.entries(result.applications)) {
           if (count === null) {
             // Extract number from "1x", "2x" etc
-            const appCount = parseInt(app.replace('x', ''));
+            const appCount = parseInt(app.replace("x", ""));
             if (!isNaN(appCount)) {
               nullApps.push(appCount);
             }
@@ -305,7 +322,7 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
           name: result.sticker,
           collection: result.collection,
           rarity: result.rarity,
-          nullApps: nullApps
+          nullApps: nullApps,
         });
       }
     }
@@ -314,8 +331,12 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
 
     for (let i = 0; i < stickersWithNulls.length; i++) {
       const item = stickersWithNulls[i];
-      console.log(`\n[${i + 1}/${stickersWithNulls.length}] Re-scraping nulls for ${item.name}...`);
-      console.log(`  Missing counts: ${item.nullApps.join(', ')}x`);
+      console.log(
+        `\n[${i + 1}/${stickersWithNulls.length}] Re-scraping nulls for ${
+          item.name
+        }...`
+      );
+      console.log(`  Missing counts: ${item.nullApps.join(", ")}x`);
 
       await processStickerWithRetry(item, item.nullApps, state, progress);
     }
@@ -332,7 +353,7 @@ async function scrapeCSFloat(stickers, maxApplications = 5) {
 // Robust sticker processor with retry logic
 async function processStickerWithRetry(sticker, appCounts, state, progress) {
   // Find or create result object
-  let stickerResults = progress.results.find(r => r.stickerId === sticker.id);
+  let stickerResults = progress.results.find((r) => r.stickerId === sticker.id);
   if (!stickerResults) {
     stickerResults = {
       timestamp: new Date().toISOString(),
@@ -351,7 +372,8 @@ async function processStickerWithRetry(sticker, appCounts, state, progress) {
     let success = false;
     let localRetries = 0;
 
-    while (!success && localRetries < 3) { // Retry a few times for this specific count if needed
+    while (!success && localRetries < 3) {
+      // Retry a few times for this specific count if needed
       const stickerArray = Array(appCount).fill({ i: sticker.id });
       const stickerParam = encodeURIComponent(JSON.stringify(stickerArray));
       const url = `https://csfloat.com/db?min=0&max=1&stickers=${stickerParam}`;
@@ -385,14 +407,14 @@ async function processStickerWithRetry(sticker, appCounts, state, progress) {
 
         // Success cleanup
         consecutiveRateLimits = 0;
-        if (currentCooldown > INITIAL_COOLDOWN) currentCooldown = INITIAL_COOLDOWN;
+        if (currentCooldown > INITIAL_COOLDOWN)
+          currentCooldown = INITIAL_COOLDOWN;
 
         // Save
         saveProgress(progress);
         saveIncrementalResults(progress.results);
 
         await state.page.waitForTimeout(REQUEST_DELAY);
-
       } catch (error) {
         console.log(`    ✗ Error: ${error.message}`);
 
@@ -403,7 +425,7 @@ async function processStickerWithRetry(sticker, appCounts, state, progress) {
           state.context = result.context;
           state.page = result.page;
           // Don't increment localRetries for rate limits, just retry indefinitely (or until max global retries)
-          // But we should be careful not to loop forever. 
+          // But we should be careful not to loop forever.
           // handleRateLimit handles the waiting. We just loop back.
         } else {
           // Non-rate limit error
