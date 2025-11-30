@@ -94,7 +94,7 @@
       "2x": 3678,
       "3x": 713,
       "4x": 320,
-      "5x": null
+      "5x": 107
     },
     "error": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.count.ng-star-inserted')\u001b[22m\n"
   }
