@@ -2,13 +2,13 @@ const { chromium } = require("playwright");
 const fs = require("fs");
 
 // Configuration
-const AUTH_FILE = "auth_2.json";
-const INITIAL_COOLDOWN = 360000; // 6 minutes in milliseconds
+const AUTH_FILE = "auth.json";
+const INITIAL_COOLDOWN = 630000; // 6 minutes in milliseconds
 const MAX_COOLDOWN = 1800000; // 30 minutes max
 const COOLDOWN_MULTIPLIER = 1.5; // Increase cooldown by 50% each time
 const REQUEST_DELAY = 8000; // 8 seconds between requests (increased from 3)
 const BATCH_SIZE = 20;
-const BATCH_SLEEP_DURATION = 180000; // 3 minutes in milliseconds
+const BATCH_SLEEP_DURATION = 600000; // 3 minutes in milliseconds
 
 let currentCooldown = INITIAL_COOLDOWN;
 let consecutiveRateLimits = 0;
