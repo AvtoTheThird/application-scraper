@@ -56,6 +56,28 @@ app.get("/api/stickers", async (req, res) => {
   }
 });
 
+// Receive scraped data
+app.post("/api/upload", async (req, res) => {
+  try {
+    const results = req.body;
+
+    if (!Array.isArray(results)) {
+      return res.status(400).json({ error: "Invalid data format. Expected array of results." });
+    }
+
+    console.log(`\n📥 Received upload of ${results.length} items`);
+
+    // Insert into database
+    const { insertScrapeResults } = require("../db/database");
+    await insertScrapeResults(results);
+
+    res.json({ success: true, count: results.length });
+  } catch (error) {
+    console.error("Upload error:", error);
+    res.status(500).json({ error: "Failed to process upload" });
+  }
+});
+
 // Get history for specific sticker
 app.get("/api/stickers/:id/history", async (req, res) => {
   try {
