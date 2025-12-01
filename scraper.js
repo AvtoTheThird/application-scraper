@@ -1,7 +1,7 @@
 const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios"); // You might need to install axios or use fetch
+// const axios = require("axios"); // You might need to install axios or use fetch
 
 // Configuration
 const AUTH_FILE = "auth.json";
