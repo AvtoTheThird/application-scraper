@@ -10,7 +10,7 @@ const MAX_COOLDOWN = 1800000; // 30 minutes max
 const COOLDOWN_MULTIPLIER = 1.5; // Increase cooldown by 50% each time
 const REQUEST_DELAY = 8000; // 8 seconds between requests
 const BATCH_SLEEP_DURATION = 180000; // 3 minutes in milliseconds
-const BACKEND_URL = "http://localhost:3001/api/upload";
+const BACKEND_URL = "http://158.220.103.189:3001/api/upload";
 
 let currentCooldown = INITIAL_COOLDOWN;
 let consecutiveRateLimits = 0;
@@ -168,6 +168,7 @@ async function processStickerWithRetry(sticker, appCounts, state) {
     collection: sticker.collection,
     rarity: sticker.rarity,
     applications: {},
+    uploadedToServer: false,
   };
 
   for (let i = 0; i < appCounts.length; i++) {
@@ -260,7 +261,7 @@ function saveBatchResults(results, collection, rarity) {
 // Upload results to backend
 async function uploadResults(results) {
   try {
-    console.log("📤 Uploading results to backend...");
+    console.log("📤 Uploading results to backend...", results);
     // Use dynamic import for fetch if node version supports it, or just use axios if available.
     // Since I don't want to mess with dependencies, I'll use the built-in fetch (Node 18+) or assume axios is there.
     // The user has `npm run dev` running, so likely a modern node env.
@@ -319,6 +320,32 @@ async function main() {
       for (const [rarity, items] of Object.entries(rarities)) {
         console.log(`  💎 Rarity: ${rarity} (${items.length} items)`);
 
+        // Check if batch already exists
+        const dateStr = new Date().toISOString().split('T')[0];
+        const safeCollection = collectionName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        const filename = `data/${dateStr}/${safeCollection}_${rarity}.json`;
+
+        if (fs.existsSync(filename)) {
+          console.log(`✓ Batch already exists: ${filename}. Checking upload status...`);
+          const existingData = JSON.parse(fs.readFileSync(filename, "utf-8"));
+
+          // Check if already uploaded
+          const allUploaded = existingData.every(r => r.uploadedToServer);
+          if (allUploaded) {
+            console.log(`  ✓ All items already uploaded. Skipping batch.`);
+            continue;
+          } else {
+            console.log(`  ⚠️ Found existing batch but not fully uploaded. Re-uploading...`);
+            const uploadSuccess = await uploadResults(existingData);
+            if (uploadSuccess) {
+              console.log("Marking items as uploaded...");
+              existingData.forEach(r => r.uploadedToServer = true);
+              saveBatchResults(existingData, collectionName, rarity);
+            }
+            continue; // Skip scraping since we have the data
+          }
+        }
+
         const batchResults = [];
 
         for (let i = 0; i < items.length; i++) {
@@ -333,8 +360,17 @@ async function main() {
         // Save batch
         saveBatchResults(batchResults, collectionName, rarity);
 
+        console.log(`Debug: batchResults type: ${typeof batchResults}, isArray: ${Array.isArray(batchResults)}, length: ${batchResults ? batchResults.length : 'N/A'}`);
+
         // Upload batch
-        await uploadResults(batchResults);
+        const uploadSuccess = await uploadResults(batchResults);
+
+        // Mark as uploaded in the saved file
+        if (uploadSuccess) {
+          console.log("Marking items as uploaded...");
+          batchResults.forEach(r => r.uploadedToServer = true);
+          saveBatchResults(batchResults, collectionName, rarity);
+        }
 
         // Timeout between batches
         console.log(`\n💤 Batch complete. Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds...`);
