@@ -46,6 +46,12 @@ export default function Home() {
       gradient: "from-blue-500 to-purple-500",
       image: "/budapest_2025_challengers.png",
     },
+    {
+      id: "2025_Community_Sticker_Collection",
+      name: "2025 Community Sticker Collection",
+      gradient: "from-blue-500 to-purple-500",
+      image: "/2025_community_sticker_collection.png",
+    }
   ];
 
   return (

@@ -206,6 +206,16 @@ async function processStickerWithRetry(sticker, appCounts, state) {
           result.applications[`${appCount}x`] = count;
           console.log(`    ✓ ${count.toLocaleString()} items`);
           success = true;
+
+          // Optimization: If count is 0, don't check higher crafts
+          if (count === 0) {
+            console.log(`    ✓ Count is 0, skipping higher crafts...`);
+            // Fill remaining with 0
+            for (let j = i + 1; j < appCounts.length; j++) {
+              result.applications[`${appCounts[j]}x`] = 0;
+            }
+            return result;
+          }
         }
 
         consecutiveRateLimits = 0;
@@ -301,6 +311,8 @@ async function main() {
     page: null,
   };
 
+  let stickersProcessed = 0;
+
   try {
     state.browser = await chromium.launch({
       headless: false,
@@ -355,6 +367,13 @@ async function main() {
           const stickerWithMeta = { ...sticker, collection: collectionName, rarity };
           const result = await processStickerWithRetry(stickerWithMeta, [1, 2, 3, 4, 5], state);
           batchResults.push(result);
+
+          stickersProcessed++;
+          if (stickersProcessed % 10 === 0) {
+            console.log(`\n💤 Processed ${stickersProcessed} stickers. Sleeping for 10 minutes...`);
+            await new Promise(resolve => setTimeout(resolve, 600000));
+            console.log("✓ Resuming scrape...\n");
+          }
         }
 
         // Save batch
@@ -373,8 +392,8 @@ async function main() {
         }
 
         // Timeout between batches
-        console.log(`\n💤 Batch complete. Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds...`);
-        await new Promise(resolve => setTimeout(resolve, BATCH_SLEEP_DURATION));
+        // console.log(`\n💤 Batch complete. Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds...`);
+        // await new Promise(resolve => setTimeout(resolve, BATCH_SLEEP_DURATION));
       }
     }
 
