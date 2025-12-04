@@ -10,7 +10,7 @@ const MAX_COOLDOWN = 1800000; // 30 minutes max
 const COOLDOWN_MULTIPLIER = 1.5; // Increase cooldown by 50% each time
 const REQUEST_DELAY = 8000; // 8 seconds between requests
 const BATCH_SLEEP_DURATION = 180000; // 3 minutes in milliseconds
-const BACKEND_URL = "http://158.220.103.189:3001/api/upload";
+const BACKEND_URL = "https://api.cs2stickertracker.com/api/upload";
 
 let currentCooldown = INITIAL_COOLDOWN;
 let consecutiveRateLimits = 0;

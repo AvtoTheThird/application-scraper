@@ -12,7 +12,7 @@
       "4x": 427,
       "5x": 330
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:40:31.551Z",
@@ -27,7 +27,7 @@
       "4x": 95,
       "5x": 25
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:41:44.283Z",
@@ -42,7 +42,7 @@
       "4x": 64,
       "5x": 28
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:43:43.997Z",
@@ -57,7 +57,7 @@
       "4x": 26,
       "5x": 4
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:44:52.409Z",
@@ -72,7 +72,7 @@
       "4x": 31,
       "5x": 6
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:46:03.216Z",
@@ -87,6 +87,6 @@
       "4x": 55,
       "5x": 15
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   }
 ]

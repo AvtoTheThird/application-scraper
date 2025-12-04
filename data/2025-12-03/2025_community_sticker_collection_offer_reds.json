@@ -12,7 +12,7 @@
       "4x": 2,
       "5x": 0
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:59:49.750Z",
@@ -27,7 +27,7 @@
       "4x": 38,
       "5x": 6
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T20:01:13.992Z",
@@ -42,6 +42,6 @@
       "4x": 15,
       "5x": 5
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   }
 ]

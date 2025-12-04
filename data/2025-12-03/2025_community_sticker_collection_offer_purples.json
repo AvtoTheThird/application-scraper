@@ -12,7 +12,7 @@
       "4x": 335,
       "5x": 62
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:19:11.006Z",
@@ -27,7 +27,7 @@
       "4x": 126,
       "5x": 51
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:20:41.048Z",
@@ -42,7 +42,7 @@
       "4x": 87,
       "5x": 46
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:22:08.720Z",
@@ -57,7 +57,7 @@
       "4x": 452,
       "5x": 117
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:23:22.951Z",
@@ -72,7 +72,7 @@
       "4x": 119,
       "5x": 37
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:24:36.038Z",
@@ -87,7 +87,7 @@
       "4x": 689,
       "5x": 400
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:26:04.296Z",
@@ -102,7 +102,7 @@
       "4x": 239,
       "5x": 137
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   },
   {
     "timestamp": "2025-12-03T19:27:50.408Z",
@@ -117,6 +117,6 @@
       "4x": 75,
       "5x": 36
     },
-    "uploadedToServer": false
+    "uploadedToServer": true
   }
 ]
