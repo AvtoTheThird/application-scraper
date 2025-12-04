@@ -8,7 +8,6 @@
     "dev": "nodemon api/server.js",
     "scrape": "node ../scraper.js",
     "import": "node scraper/import-data.js",
-    "import-all": "node scraper/import-all-data.js",
     "init-db": "psql -U postgres -d sticker_tracker -f db/schema.sql"
   },
   "dependencies": {

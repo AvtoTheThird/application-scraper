@@ -156,6 +156,134 @@ app.get("/api/collections/:collection", async (req, res) => {
   }
 });
 
+// Scraper Control
+const { spawn } = require("child_process");
+const path = require("path");
+const fs = require("fs");
+
+let scraperProcess = null;
+let scraperStatus = {
+  status: "stopped", // stopped, running, error
+  message: "Ready to start",
+  currentSticker: null,
+  progress: 0,
+  total: 0,
+  logs: [],
+};
+
+// Helper to add log
+function addLog(message) {
+  const timestamp = new Date().toLocaleTimeString();
+  scraperStatus.logs.unshift(`[${timestamp}] ${message}`);
+  if (scraperStatus.logs.length > 100) scraperStatus.logs.pop();
+}
+
+// Get available collections
+app.get("/api/collections", (req, res) => {
+  try {
+    const configPath = path.join(__dirname, "../../stickers-config.json");
+    if (!fs.existsSync(configPath)) {
+      return res.status(404).json({ error: "Config file not found" });
+    }
+    const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
+    const collections = Object.keys(config.collections);
+    res.json(collections);
+  } catch (error) {
+    console.error("Error reading config:", error);
+    res.status(500).json({ error: "Failed to load collections" });
+  }
+});
+
+// Start scraper
+app.post("/api/scraper/start", (req, res) => {
+  if (scraperProcess) {
+    return res.status(400).json({ error: "Scraper is already running" });
+  }
+
+  const { collections } = req.body; // Array of collection names
+
+  scraperStatus = {
+    status: "running",
+    message: "Starting scraper...",
+    currentSticker: null,
+    progress: 0,
+    total: 0,
+    logs: [],
+  };
+  addLog("Starting scraper process...");
+
+  const scraperPath = path.join(__dirname, "../../scraper.js");
+  const args = [];
+
+  if (collections && collections.length > 0) {
+    args.push(`--collections=${collections.join(",")}`);
+  }
+
+  scraperProcess = spawn("node", [scraperPath, ...args], {
+    cwd: path.join(__dirname, "../../"),
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  scraperProcess.stdout.on("data", (data) => {
+    const output = data.toString().trim();
+    console.log(`[Scraper] ${output}`);
+    // Parse output for logs if needed, but we rely on API calls for status
+    if (output) addLog(output);
+  });
+
+  scraperProcess.stderr.on("data", (data) => {
+    const output = data.toString().trim();
+    console.error(`[Scraper Error] ${output}`);
+    addLog(`Error: ${output}`);
+  });
+
+  scraperProcess.on("close", (code) => {
+    console.log(`[Scraper] Process exited with code ${code}`);
+    scraperProcess = null;
+    scraperStatus.status = code === 0 ? "stopped" : "error";
+    scraperStatus.message = code === 0 ? "Scraper finished successfully" : "Scraper exited with error";
+    addLog(`Scraper finished (Exit code: ${code})`);
+  });
+
+  res.json({ success: true, message: "Scraper started" });
+});
+
+// Stop scraper
+app.post("/api/scraper/stop", (req, res) => {
+  if (!scraperProcess) {
+    return res.status(400).json({ error: "Scraper is not running" });
+  }
+
+  addLog("Stopping scraper...");
+  scraperProcess.kill("SIGTERM");
+  // Force kill if it doesn't stop in 5 seconds
+  setTimeout(() => {
+    if (scraperProcess) {
+      addLog("Force killing scraper...");
+      scraperProcess.kill("SIGKILL");
+    }
+  }, 5000);
+
+  res.json({ success: true, message: "Stop signal sent" });
+});
+
+// Get scraper status
+app.get("/api/scraper/status", (req, res) => {
+  res.json(scraperStatus);
+});
+
+// Report progress (called by scraper)
+app.post("/api/scraper/progress", (req, res) => {
+  const { message, currentSticker, progress, total } = req.body;
+
+  if (message) scraperStatus.message = message;
+  if (currentSticker) scraperStatus.currentSticker = currentSticker;
+  if (progress !== undefined) scraperStatus.progress = progress;
+  if (total !== undefined) scraperStatus.total = total;
+
+  res.json({ success: true });
+});
+
 app.listen(PORT, () => {
   console.log(`✓ API server running on http://localhost:${PORT}`);
 });

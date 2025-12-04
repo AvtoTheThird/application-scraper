@@ -301,8 +301,31 @@ async function uploadResults(results) {
   }
 }
 
+// Report progress to backend
+async function reportProgress(message, currentSticker, progress, total) {
+  try {
+    await fetch("http://158.220.103.189:3001/api/scraper/progress", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, currentSticker, progress, total }),
+    });
+  } catch (e) {
+    // Ignore errors reporting progress
+  }
+}
+
 async function main() {
   console.log("=== CS:GO Sticker Application Scraper (Batch Mode) ===");
+
+  // Parse arguments
+  const args = process.argv.slice(2);
+  let targetCollections = [];
+
+  args.forEach(arg => {
+    if (arg.startsWith("--collections=")) {
+      targetCollections = arg.split("=")[1].split(",");
+    }
+  });
 
   const config = loadConfig();
   const state = {
@@ -312,6 +335,17 @@ async function main() {
   };
 
   let stickersProcessed = 0;
+  let totalStickersToScrape = 0;
+
+  // Calculate total
+  for (const [collectionName, rarities] of Object.entries(config.collections)) {
+    if (targetCollections.length > 0 && !targetCollections.includes(collectionName)) continue;
+    for (const [rarity, items] of Object.entries(rarities)) {
+      totalStickersToScrape += items.length;
+    }
+  }
+
+  await reportProgress("Starting scraper...", null, 0, totalStickersToScrape);
 
   try {
     state.browser = await chromium.launch({
@@ -326,8 +360,16 @@ async function main() {
     state.context = await createContext(state.browser, AUTH_FILE);
     state.page = await state.context.newPage();
 
+    let currentProgress = 0;
+
     for (const [collectionName, rarities] of Object.entries(config.collections)) {
+      if (targetCollections.length > 0 && !targetCollections.includes(collectionName)) {
+        console.log(`Skipping collection: ${collectionName}`);
+        continue;
+      }
+
       console.log(`\n📦 Collection: ${collectionName}`);
+      await reportProgress(`Processing collection: ${collectionName}`, null, currentProgress, totalStickersToScrape);
 
       for (const [rarity, items] of Object.entries(rarities)) {
         console.log(`  💎 Rarity: ${rarity} (${items.length} items)`);
@@ -345,6 +387,8 @@ async function main() {
           const allUploaded = existingData.every(r => r.uploadedToServer);
           if (allUploaded) {
             console.log(`  ✓ All items already uploaded. Skipping batch.`);
+            currentProgress += items.length;
+            await reportProgress(null, null, currentProgress, totalStickersToScrape);
             continue;
           } else {
             console.log(`  ⚠️ Found existing batch but not fully uploaded. Re-uploading...`);
@@ -354,6 +398,8 @@ async function main() {
               existingData.forEach(r => r.uploadedToServer = true);
               saveBatchResults(existingData, collectionName, rarity);
             }
+            currentProgress += items.length;
+            await reportProgress(null, null, currentProgress, totalStickersToScrape);
             continue; // Skip scraping since we have the data
           }
         }
@@ -363,23 +409,27 @@ async function main() {
         for (let i = 0; i < items.length; i++) {
           const sticker = items[i];
           console.log(`\n    [${i + 1}/${items.length}] Scraping: ${sticker.name}`);
+          await reportProgress(null, sticker.name, currentProgress, totalStickersToScrape);
 
           const stickerWithMeta = { ...sticker, collection: collectionName, rarity };
           const result = await processStickerWithRetry(stickerWithMeta, [1, 2, 3, 4, 5], state);
           batchResults.push(result);
 
           stickersProcessed++;
+          currentProgress++;
+
           if (stickersProcessed % 10 === 0) {
-            console.log(`\n💤 Processed ${stickersProcessed} stickers. Sleeping for 10 minutes...`);
+            const msg = `Processed ${stickersProcessed} stickers. Sleeping for 10 minutes...`;
+            console.log(`\n💤 ${msg}`);
+            await reportProgress(msg, null, currentProgress, totalStickersToScrape);
             await new Promise(resolve => setTimeout(resolve, 600000));
             console.log("✓ Resuming scrape...\n");
+            await reportProgress("Resuming scrape...", null, currentProgress, totalStickersToScrape);
           }
         }
 
         // Save batch
         saveBatchResults(batchResults, collectionName, rarity);
-
-        console.log(`Debug: batchResults type: ${typeof batchResults}, isArray: ${Array.isArray(batchResults)}, length: ${batchResults ? batchResults.length : 'N/A'}`);
 
         // Upload batch
         const uploadSuccess = await uploadResults(batchResults);
@@ -390,19 +440,18 @@ async function main() {
           batchResults.forEach(r => r.uploadedToServer = true);
           saveBatchResults(batchResults, collectionName, rarity);
         }
-
-        // Timeout between batches
-        // console.log(`\n💤 Batch complete. Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds...`);
-        // await new Promise(resolve => setTimeout(resolve, BATCH_SLEEP_DURATION));
       }
     }
 
     console.log("\n=== All Collections Scraped ===");
+    await reportProgress("Scraping complete!", null, totalStickersToScrape, totalStickersToScrape);
     await state.browser.close();
 
   } catch (error) {
     console.error("\n❌ Fatal error:", error);
+    await reportProgress(`Fatal error: ${error.message}`, null, 0, 0);
     if (state.browser) await state.browser.close();
+    process.exit(1);
   }
 }
 

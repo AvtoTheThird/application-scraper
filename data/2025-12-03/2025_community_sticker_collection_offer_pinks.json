@@ -1,0 +1,92 @@
+[
+  {
+    "timestamp": "2025-12-03T19:29:03.401Z",
+    "sticker": "Good As New (Foil)",
+    "stickerId": "9473",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 1311,
+      "2x": 682,
+      "3x": 538,
+      "4x": 427,
+      "5x": 330
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:40:31.551Z",
+    "sticker": "Hands Off (Foil)",
+    "stickerId": "9474",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 1015,
+      "2x": 209,
+      "3x": 148,
+      "4x": 95,
+      "5x": 25
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:41:44.283Z",
+    "sticker": "Eyes In The Sky (Foil)",
+    "stickerId": "9472",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 758,
+      "2x": 117,
+      "3x": 85,
+      "4x": 64,
+      "5x": 28
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:43:43.997Z",
+    "sticker": "Queen Ava (Foil)",
+    "stickerId": "9476",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 905,
+      "2x": 111,
+      "3x": 42,
+      "4x": 26,
+      "5x": 4
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:44:52.409Z",
+    "sticker": "King Crasswater (Foil)",
+    "stickerId": "9475",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 944,
+      "2x": 131,
+      "3x": 63,
+      "4x": 31,
+      "5x": 6
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:46:03.216Z",
+    "sticker": "Ain't A Rental (Foil)",
+    "stickerId": "9471",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "pinks",
+    "applications": {
+      "1x": 1297,
+      "2x": 116,
+      "3x": 76,
+      "4x": 55,
+      "5x": 15
+    },
+    "uploadedToServer": false
+  }
+]

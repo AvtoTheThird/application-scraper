@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2025-12-03T19:58:05.671Z",
+    "sticker": "BullHit (Lenticular)",
+    "stickerId": "9479",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "reds",
+    "applications": {
+      "1x": 265,
+      "2x": 16,
+      "3x": 10,
+      "4x": 2,
+      "5x": 0
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T19:59:49.750Z",
+    "sticker": "Neon MVP (Lenticular)",
+    "stickerId": "9478",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "reds",
+    "applications": {
+      "1x": 579,
+      "2x": 59,
+      "3x": 49,
+      "4x": 38,
+      "5x": 6
+    },
+    "uploadedToServer": false
+  },
+  {
+    "timestamp": "2025-12-03T20:01:13.992Z",
+    "sticker": "Digi-Strike (Lenticular)",
+    "stickerId": "9477",
+    "collection": "2025 Community Sticker Collection Offer",
+    "rarity": "reds",
+    "applications": {
+      "1x": 548,
+      "2x": 35,
+      "3x": 21,
+      "4x": 15,
+      "5x": 5
+    },
+    "uploadedToServer": false
+  }
+]
