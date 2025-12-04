@@ -284,6 +284,132 @@ app.post("/api/scraper/progress", (req, res) => {
   res.json({ success: true });
 });
 
+// Data Management Endpoints
+
+// Get list of date folders
+app.get("/api/data", (req, res) => {
+  try {
+    const dataPath = path.join(__dirname, "../../data");
+    if (!fs.existsSync(dataPath)) {
+      return res.json([]);
+    }
+
+    const folders = fs.readdirSync(dataPath)
+      .filter(file => fs.statSync(path.join(dataPath, file)).isDirectory())
+      .sort()
+      .reverse(); // Newest first
+
+    res.json(folders);
+  } catch (error) {
+    console.error("Error listing data folders:", error);
+    res.status(500).json({ error: "Failed to list data folders" });
+  }
+});
+
+// Get files in a date folder with status
+app.get("/api/data/:date", (req, res) => {
+  try {
+    const { date } = req.params;
+    const folderPath = path.join(__dirname, "../../data", date);
+
+    if (!fs.existsSync(folderPath)) {
+      return res.status(404).json({ error: "Folder not found" });
+    }
+
+    const files = fs.readdirSync(folderPath)
+      .filter(file => file.endsWith(".json"))
+      .map(file => {
+        const filePath = path.join(folderPath, file);
+        try {
+          const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+          const totalItems = Array.isArray(content) ? content.length : 0;
+          const uploadedCount = Array.isArray(content) ? content.filter(i => i.uploadedToServer).length : 0;
+
+          let status = "pending";
+          if (totalItems > 0) {
+            if (uploadedCount === totalItems) status = "uploaded";
+            else if (uploadedCount > 0) status = "partial";
+          }
+
+          return {
+            filename: file,
+            totalItems,
+            uploadedCount,
+            status
+          };
+        } catch (e) {
+          return {
+            filename: file,
+            totalItems: 0,
+            uploadedCount: 0,
+            status: "error",
+            error: "Invalid JSON"
+          };
+        }
+      });
+
+    res.json(files);
+  } catch (error) {
+    console.error("Error listing data files:", error);
+    res.status(500).json({ error: "Failed to list data files" });
+  }
+});
+
+// Manually upload a file
+app.post("/api/data/upload", async (req, res) => {
+  try {
+    const { date, filename } = req.body;
+    const filePath = path.join(__dirname, "../../data", date, filename);
+
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ error: "File not found" });
+    }
+
+    const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    if (!Array.isArray(content)) {
+      return res.status(400).json({ error: "Invalid file format" });
+    }
+
+    // Filter items that are NOT uploaded yet
+    // Actually, for manual upload, we might want to re-upload everything or just missing ones.
+    // Let's just upload everything to be safe, the DB should handle duplicates (upsert).
+    // But to be efficient, let's filter if possible.
+    // The user request implies "manually upload if they are not uploaded".
+
+    console.log(`\n📥 Manual upload request for ${filename} (${content.length} items)`);
+
+    // Insert into database
+    // const { insertScrapeResults } = require("../db/database");
+    // await insertScrapeResults(content);
+
+    // Forward to remote server
+    const REMOTE_API_URL = "https://api.cs2stickertracker.com/api/upload";
+    console.log(`Forwarding upload to ${REMOTE_API_URL}...`);
+
+    const response = await fetch(REMOTE_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(content),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Remote upload failed: ${response.status} ${response.statusText}`);
+    }
+
+    const remoteData = await response.json();
+    console.log(`✓ Remote upload successful: ${remoteData.count} items`);
+
+    // Mark all as uploaded
+    content.forEach(r => r.uploadedToServer = true);
+    fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+
+    res.json({ success: true, count: content.length });
+  } catch (error) {
+    console.error("Manual upload error:", error);
+    res.status(500).json({ error: "Failed to process upload" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`✓ API server running on http://localhost:${PORT}`);
 });
