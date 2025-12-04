@@ -10,7 +10,7 @@ const MAX_COOLDOWN = 1800000; // 30 minutes max
 const COOLDOWN_MULTIPLIER = 1.5; // Increase cooldown by 50% each time
 const REQUEST_DELAY = 8000; // 8 seconds between requests
 const BATCH_SLEEP_DURATION = 180000; // 3 minutes in milliseconds
-const BACKEND_URL = "https://api.cs2stickertracker.com/api/upload";
+const BACKEND_URL = "http://158.220.103.189:3001/api/upload";
 
 let currentCooldown = INITIAL_COOLDOWN;
 let consecutiveRateLimits = 0;
@@ -99,6 +99,7 @@ async function isRateLimited(page, error) {
 
 // Check if the combination doesn't exist
 async function isNoResults(page) {
+  // Check 1: Standard text check
   const foundNoItems = await page
     .locator("text=Found No Items")
     .isVisible({ timeout: 2000 })
@@ -106,12 +107,29 @@ async function isNoResults(page) {
 
   if (foundNoItems) return true;
 
+  // Check 2: "Impossible" text check
   const impossibleText = await page
     .locator("text=impossible")
     .isVisible({ timeout: 2000 })
     .catch(() => false);
 
   if (impossibleText) return true;
+
+  // Check 3: Specific header structure (Redundancy)
+  const headerNoItems = await page
+    .locator('.header span:has-text("Found No Items")')
+    .isVisible({ timeout: 2000 })
+    .catch(() => false);
+
+  if (headerNoItems) return true;
+
+  // Check 4: Specific sub-text structure (Redundancy)
+  const subTextImpossible = await page
+    .locator('.sub-text:has-text("impossible")')
+    .isVisible({ timeout: 2000 })
+    .catch(() => false);
+
+  if (subTextImpossible) return true;
 
   return false;
 }
@@ -179,7 +197,12 @@ async function processStickerWithRetry(sticker, appCounts, state) {
     while (!success && localRetries < 3) {
       const stickerArray = Array(appCount).fill({ i: sticker.id });
       const stickerParam = encodeURIComponent(JSON.stringify(stickerArray));
-      const url = `https://csfloat.com/db?min=0&max=1&stickers=${stickerParam}`;
+
+      let urlParams = `min=0&max=1&stickers=${stickerParam}`;
+      if (sticker.name.includes("(Gold)")) {
+        urlParams = `category=1&${urlParams}`;
+      }
+      const url = `https://csfloat.com/db?${urlParams}`;
 
       console.log(`  Checking ${appCount}x applications...`);
 
@@ -193,9 +216,14 @@ async function processStickerWithRetry(sticker, appCounts, state) {
 
         const noResults = await isNoResults(state.page);
         if (noResults) {
-          console.log(`    ✓ No items (0)`);
+          console.log(`    ✓ No items (0) - Stopping sticker scrape`);
           result.applications[`${appCount}x`] = 0;
-          success = true;
+
+          // Fill remaining with 0
+          for (let j = i + 1; j < appCounts.length; j++) {
+            result.applications[`${appCounts[j]}x`] = 0;
+          }
+          return result;
         } else {
           const countText = await state.page
             .locator(".count.ng-star-inserted")
@@ -301,31 +329,8 @@ async function uploadResults(results) {
   }
 }
 
-// Report progress to backend
-async function reportProgress(message, currentSticker, progress, total) {
-  try {
-    await fetch("http://158.220.103.189:3001/api/scraper/progress", {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message, currentSticker, progress, total }),
-    });
-  } catch (e) {
-    // Ignore errors reporting progress
-  }
-}
-
 async function main() {
   console.log("=== CS:GO Sticker Application Scraper (Batch Mode) ===");
-
-  // Parse arguments
-  const args = process.argv.slice(2);
-  let targetCollections = [];
-
-  args.forEach(arg => {
-    if (arg.startsWith("--collections=")) {
-      targetCollections = arg.split("=")[1].split(",");
-    }
-  });
 
   const config = loadConfig();
   const state = {
@@ -335,17 +340,6 @@ async function main() {
   };
 
   let stickersProcessed = 0;
-  let totalStickersToScrape = 0;
-
-  // Calculate total
-  for (const [collectionName, rarities] of Object.entries(config.collections)) {
-    if (targetCollections.length > 0 && !targetCollections.includes(collectionName)) continue;
-    for (const [rarity, items] of Object.entries(rarities)) {
-      totalStickersToScrape += items.length;
-    }
-  }
-
-  await reportProgress("Starting scraper...", null, 0, totalStickersToScrape);
 
   try {
     state.browser = await chromium.launch({
@@ -360,16 +354,8 @@ async function main() {
     state.context = await createContext(state.browser, AUTH_FILE);
     state.page = await state.context.newPage();
 
-    let currentProgress = 0;
-
     for (const [collectionName, rarities] of Object.entries(config.collections)) {
-      if (targetCollections.length > 0 && !targetCollections.includes(collectionName)) {
-        console.log(`Skipping collection: ${collectionName}`);
-        continue;
-      }
-
       console.log(`\n📦 Collection: ${collectionName}`);
-      await reportProgress(`Processing collection: ${collectionName}`, null, currentProgress, totalStickersToScrape);
 
       for (const [rarity, items] of Object.entries(rarities)) {
         console.log(`  💎 Rarity: ${rarity} (${items.length} items)`);
@@ -387,8 +373,6 @@ async function main() {
           const allUploaded = existingData.every(r => r.uploadedToServer);
           if (allUploaded) {
             console.log(`  ✓ All items already uploaded. Skipping batch.`);
-            currentProgress += items.length;
-            await reportProgress(null, null, currentProgress, totalStickersToScrape);
             continue;
           } else {
             console.log(`  ⚠️ Found existing batch but not fully uploaded. Re-uploading...`);
@@ -398,8 +382,6 @@ async function main() {
               existingData.forEach(r => r.uploadedToServer = true);
               saveBatchResults(existingData, collectionName, rarity);
             }
-            currentProgress += items.length;
-            await reportProgress(null, null, currentProgress, totalStickersToScrape);
             continue; // Skip scraping since we have the data
           }
         }
@@ -409,27 +391,23 @@ async function main() {
         for (let i = 0; i < items.length; i++) {
           const sticker = items[i];
           console.log(`\n    [${i + 1}/${items.length}] Scraping: ${sticker.name}`);
-          await reportProgress(null, sticker.name, currentProgress, totalStickersToScrape);
 
           const stickerWithMeta = { ...sticker, collection: collectionName, rarity };
           const result = await processStickerWithRetry(stickerWithMeta, [1, 2, 3, 4, 5], state);
           batchResults.push(result);
 
           stickersProcessed++;
-          currentProgress++;
-
           if (stickersProcessed % 10 === 0) {
-            const msg = `Processed ${stickersProcessed} stickers. Sleeping for 10 minutes...`;
-            console.log(`\n💤 ${msg}`);
-            await reportProgress(msg, null, currentProgress, totalStickersToScrape);
+            console.log(`\n💤 Processed ${stickersProcessed} stickers. Sleeping for 10 minutes...`);
             await new Promise(resolve => setTimeout(resolve, 600000));
             console.log("✓ Resuming scrape...\n");
-            await reportProgress("Resuming scrape...", null, currentProgress, totalStickersToScrape);
           }
         }
 
         // Save batch
         saveBatchResults(batchResults, collectionName, rarity);
+
+        console.log(`Debug: batchResults type: ${typeof batchResults}, isArray: ${Array.isArray(batchResults)}, length: ${batchResults ? batchResults.length : 'N/A'}`);
 
         // Upload batch
         const uploadSuccess = await uploadResults(batchResults);
@@ -440,18 +418,19 @@ async function main() {
           batchResults.forEach(r => r.uploadedToServer = true);
           saveBatchResults(batchResults, collectionName, rarity);
         }
+
+        // Timeout between batches
+        // console.log(`\n💤 Batch complete. Sleeping for ${BATCH_SLEEP_DURATION / 1000} seconds...`);
+        // await new Promise(resolve => setTimeout(resolve, BATCH_SLEEP_DURATION));
       }
     }
 
     console.log("\n=== All Collections Scraped ===");
-    await reportProgress("Scraping complete!", null, totalStickersToScrape, totalStickersToScrape);
     await state.browser.close();
 
   } catch (error) {
     console.error("\n❌ Fatal error:", error);
-    await reportProgress(`Fatal error: ${error.message}`, null, 0, 0);
     if (state.browser) await state.browser.close();
-    process.exit(1);
   }
 }
 
