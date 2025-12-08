@@ -199,10 +199,15 @@ async function processStickerWithRetry(sticker, appCounts, state) {
       const stickerParam = encodeURIComponent(JSON.stringify(stickerArray));
 
       let urlParams = `min=0&max=1&stickers=${stickerParam}`;
-      if (sticker.name.includes("(Gold)")) {
+
+      // Check for Gold sticker (case-insensitive)
+      if (sticker.name && sticker.name.toLowerCase().includes("(gold)")) {
+        console.log(`    ℹ️  Gold sticker detected: "${sticker.name}" - Adding category=1`);
         urlParams = `category=1&${urlParams}`;
       }
+
       const url = `https://csfloat.com/db?${urlParams}`;
+      // console.log(`    Debug URL: ${url}`);
 
       console.log(`  Checking ${appCount}x applications...`);
 
