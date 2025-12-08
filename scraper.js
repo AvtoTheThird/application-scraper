@@ -219,30 +219,23 @@ async function processStickerWithRetry(sticker, appCounts, state) {
           throw new Error("Rate limit detected");
         }
 
-        // First, check if the count element exists (with short timeout)
-        const countElement = state.page.locator(".count.ng-star-inserted");
-        const hasCountElement = await countElement.isVisible({ timeout: 5000 }).catch(() => false);
+        // Check for "no results" BEFORE trying to get count element
+        const noResults = await isNoResults(state.page);
+        if (noResults) {
+          console.log(`    ✓ No items (0) - Stopping sticker scrape`);
+          result.applications[`${appCount}x`] = 0;
 
-        if (!hasCountElement) {
-          // Count element doesn't exist, check for "no results" indicators
-          const noResults = await isNoResults(state.page);
-          if (noResults) {
-            console.log(`    ✓ No items (0) - Stopping sticker scrape`);
-            result.applications[`${appCount}x`] = 0;
-
-            // Fill remaining with 0
-            for (let j = i + 1; j < appCounts.length; j++) {
-              result.applications[`${appCounts[j]}x`] = 0;
-            }
-            return result;
-          } else {
-            // Neither count element nor "no results" found - something is wrong
-            throw new Error("Could not find count element or no results indicator");
+          // Fill remaining with 0
+          for (let j = i + 1; j < appCounts.length; j++) {
+            result.applications[`${appCounts[j]}x`] = 0;
           }
+          return result;
         }
 
-        // Count element exists, get the count
-        const countText = await countElement.textContent({ timeout: 5000 });
+        // If no "no results" message, try to get the count
+        const countText = await state.page
+          .locator(".count.ng-star-inserted")
+          .textContent({ timeout: 30000 });
         const match = countText.match(/[\d,]+/);
         const count = match ? parseInt(match[0].replace(/,/g, "")) : 0;
 
