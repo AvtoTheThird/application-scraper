@@ -143,6 +143,51 @@ async function isNoResults(page, timeout = 10000) {
   return false;
 }
 
+// Check if browser is still connected and recreate if needed
+async function ensureBrowserAlive(state) {
+  try {
+    // Check if browser, context, and page exist and are connected
+    if (!state.browser || !state.browser.isConnected()) {
+      console.log("\n⚠️  Browser disconnected. Recreating...");
+      throw new Error("Browser disconnected");
+    }
+
+    // Test if page is responsive
+    if (!state.page || state.page.isClosed()) {
+      console.log("\n⚠️  Page closed. Recreating...");
+      throw new Error("Page closed");
+    }
+
+    return true;
+  } catch (error) {
+    console.log(`  ℹ️  Recreating browser session: ${error.message}`);
+
+    // Close existing browser if it exists
+    try {
+      if (state.browser) await state.browser.close();
+    } catch (e) {
+      // Ignore close errors
+    }
+
+    // Create new browser
+    state.browser = await chromium.launch({
+      headless: false,
+      args: ["--disable-blink-features=AutomationControlled"],
+    });
+
+    // Create new context and page
+    state.context = await createContext(state.browser, AUTH_FILE);
+    if (!state.context) {
+      throw new Error("Failed to create context - auth file may be invalid");
+    }
+
+    state.page = await state.context.newPage();
+    console.log("  ✓ Browser session recreated successfully");
+
+    return true;
+  }
+}
+
 // Handle rate limit with exponential backoff
 async function handleRateLimit(browser, context) {
   consecutiveRateLimits++;
@@ -216,6 +261,9 @@ async function processStickerWithRetry(sticker, appCounts, state) {
       console.log(`  Checking ${appCount}x applications...`);
 
       try {
+        // Ensure browser is alive before making request
+        await ensureBrowserAlive(state);
+
         await state.page.goto(url, { timeout: 60000 });
         await state.page.waitForTimeout(3000);
 
