@@ -17,7 +17,7 @@ let consecutiveRateLimits = 0;
 
 // Load config
 function loadConfig() {
-  return JSON.parse(fs.readFileSync("stickers-config.json", "utf-8"));
+  return JSON.parse(fs.readFileSync("sticker-config-1.json", "utf-8"));
 }
 
 // Create browser context with specific auth file
@@ -98,11 +98,12 @@ async function isRateLimited(page, error) {
 }
 
 // Check if the combination doesn't exist
-async function isNoResults(page) {
+async function isNoResults(page, timeout = 10000) {
+  // Wait longer for elements to load since they take time to appear
   // Check 1: Standard text check
   const foundNoItems = await page
     .locator("text=Found No Items")
-    .isVisible({ timeout: 2000 })
+    .isVisible({ timeout })
     .catch(() => false);
 
   if (foundNoItems) return true;
@@ -110,7 +111,7 @@ async function isNoResults(page) {
   // Check 2: "Impossible" text check
   const impossibleText = await page
     .locator("text=impossible")
-    .isVisible({ timeout: 2000 })
+    .isVisible({ timeout })
     .catch(() => false);
 
   if (impossibleText) return true;
@@ -118,7 +119,7 @@ async function isNoResults(page) {
   // Check 3: Specific header structure (Redundancy)
   const headerNoItems = await page
     .locator('.header span:has-text("Found No Items")')
-    .isVisible({ timeout: 2000 })
+    .isVisible({ timeout })
     .catch(() => false);
 
   if (headerNoItems) return true;
@@ -126,10 +127,18 @@ async function isNoResults(page) {
   // Check 4: Specific sub-text structure (Redundancy)
   const subTextImpossible = await page
     .locator('.sub-text:has-text("impossible")')
-    .isVisible({ timeout: 2000 })
+    .isVisible({ timeout })
     .catch(() => false);
 
   if (subTextImpossible) return true;
+
+  // Check 5: app-error element (most reliable)
+  const appError = await page
+    .locator('app-error .container .header span:has-text("Found No Items")')
+    .isVisible({ timeout })
+    .catch(() => false);
+
+  if (appError) return true;
 
   return false;
 }
@@ -199,15 +208,10 @@ async function processStickerWithRetry(sticker, appCounts, state) {
       const stickerParam = encodeURIComponent(JSON.stringify(stickerArray));
 
       let urlParams = `min=0&max=1&stickers=${stickerParam}`;
-
-      // Check for Gold sticker (case-insensitive)
-      if (sticker.name && sticker.name.toLowerCase().includes("(gold)")) {
-        console.log(`    ℹ️  Gold sticker detected: "${sticker.name}" - Adding category=1`);
+      if (sticker.name.includes("(Gold)")) {
         urlParams = `category=1&${urlParams}`;
       }
-
       const url = `https://csfloat.com/db?${urlParams}`;
-      // console.log(`    Debug URL: ${url}`);
 
       console.log(`  Checking ${appCount}x applications...`);
 
@@ -219,8 +223,9 @@ async function processStickerWithRetry(sticker, appCounts, state) {
           throw new Error("Rate limit detected");
         }
 
-        // Check for "no results" BEFORE trying to get count element
-        const noResults = await isNoResults(state.page);
+        // Wait for either the count element OR the no results element to appear
+        // This prevents waiting 30 seconds when there are no results
+        const noResults = await isNoResults(state.page, 10000);
         if (noResults) {
           console.log(`    ✓ No items (0) - Stopping sticker scrape`);
           result.applications[`${appCount}x`] = 0;
@@ -232,10 +237,10 @@ async function processStickerWithRetry(sticker, appCounts, state) {
           return result;
         }
 
-        // If no "no results" message, try to get the count
+        // If we get here, there should be results - try to get the count
         const countText = await state.page
           .locator(".count.ng-star-inserted")
-          .textContent({ timeout: 30000 });
+          .textContent({ timeout: 15000 });
         const match = countText.match(/[\d,]+/);
         const count = match ? parseInt(match[0].replace(/,/g, "")) : 0;
 
@@ -268,11 +273,17 @@ async function processStickerWithRetry(sticker, appCounts, state) {
           state.context = res.context;
           state.page = res.page;
         } else {
-          const noResults = await isNoResults(state.page);
+          // Check for no results with a quick timeout since we already waited
+          const noResults = await isNoResults(state.page, 2000);
           if (noResults) {
-            console.log(`    ✓ Detected "no results" after error`);
+            console.log(`    ✓ Detected "no results" - Stopping sticker scrape`);
             result.applications[`${appCount}x`] = 0;
-            success = true;
+
+            // Fill remaining with 0 and stop scraping this sticker
+            for (let j = i + 1; j < appCounts.length; j++) {
+              result.applications[`${appCounts[j]}x`] = 0;
+            }
+            return result;
           } else {
             localRetries++;
             if (localRetries >= 3) {
