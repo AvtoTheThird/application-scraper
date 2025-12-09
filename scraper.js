@@ -383,24 +383,33 @@ async function main() {
         const safeCollection = collectionName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
         const filename = `data/${dateStr}/${safeCollection}_${rarity}.json`;
 
-        if (fs.existsSync(filename)) {
-          console.log(`✓ Batch already exists: ${filename}. Checking upload status...`);
-          const existingData = JSON.parse(fs.readFileSync(filename, "utf-8"));
+        // Load existing results (partial or complete)
+        let existingResults = [];
+        let scrapedStickerIds = new Set();
 
-          // Check if already uploaded
-          const allUploaded = existingData.every(r => r.uploadedToServer);
-          if (allUploaded) {
-            console.log(`  ✓ All items already uploaded. Skipping batch.`);
-            continue;
-          } else {
-            console.log(`  ⚠️ Found existing batch but not fully uploaded. Re-uploading...`);
-            const uploadSuccess = await uploadResults(existingData);
-            if (uploadSuccess) {
-              console.log("Marking items as uploaded...");
-              existingData.forEach(r => r.uploadedToServer = true);
-              saveBatchResults(existingData, collectionName, rarity);
+        if (fs.existsSync(filename)) {
+          existingResults = JSON.parse(fs.readFileSync(filename, "utf-8"));
+          scrapedStickerIds = new Set(existingResults.map(r => r.stickerId));
+
+          // Check if batch is complete
+          if (existingResults.length === items.length) {
+            const allUploaded = existingResults.every(r => r.uploadedToServer);
+            if (allUploaded) {
+              console.log(`  ✓ Batch complete and uploaded (${existingResults.length}/${items.length}). Skipping.`);
+              continue;
+            } else {
+              console.log(`  ⚠️  Batch complete but not uploaded. Re-uploading...`);
+              const uploadSuccess = await uploadResults(existingResults);
+              if (uploadSuccess) {
+                console.log("  ✓ Marking items as uploaded...");
+                existingResults.forEach(r => r.uploadedToServer = true);
+                saveBatchResults(existingResults, collectionName, rarity);
+              }
+              continue;
             }
-            continue; // Skip scraping since we have the data
+          } else {
+            // Partial batch - resume from where we left off
+            console.log(`  📋 Found partial batch: ${existingResults.length}/${items.length} stickers completed. Resuming...`);
           }
         }
 
@@ -408,11 +417,22 @@ async function main() {
 
         for (let i = 0; i < items.length; i++) {
           const sticker = items[i];
+
+          // Skip already-scraped stickers
+          if (scrapedStickerIds.has(sticker.id)) {
+            console.log(`\n    [${i + 1}/${items.length}] ⏭️  Skipping (already scraped): ${sticker.name}`);
+            continue;
+          }
+
           console.log(`\n    [${i + 1}/${items.length}] Scraping: ${sticker.name}`);
 
           const stickerWithMeta = { ...sticker, collection: collectionName, rarity };
           const result = await processStickerWithRetry(stickerWithMeta, [1, 2, 3, 4, 5], state);
           batchResults.push(result);
+
+          // Save incrementally (merge with existing and save after each sticker)
+          const allResults = [...existingResults, ...batchResults];
+          saveBatchResults(allResults, collectionName, rarity);
 
           stickersProcessed++;
           if (stickersProcessed % 10 === 0) {
@@ -422,19 +442,27 @@ async function main() {
           }
         }
 
-        // Save batch
-        saveBatchResults(batchResults, collectionName, rarity);
+        // Final merge and save
+        const allResults = [...existingResults, ...batchResults];
+        saveBatchResults(allResults, collectionName, rarity);
 
         console.log(`Debug: batchResults type: ${typeof batchResults}, isArray: ${Array.isArray(batchResults)}, length: ${batchResults ? batchResults.length : 'N/A'}`);
 
-        // Upload batch
-        const uploadSuccess = await uploadResults(batchResults);
+        // Upload complete batch (only newly scraped items)
+        if (batchResults.length > 0) {
+          const uploadSuccess = await uploadResults(batchResults);
 
-        // Mark as uploaded in the saved file
-        if (uploadSuccess) {
-          console.log("Marking items as uploaded...");
-          batchResults.forEach(r => r.uploadedToServer = true);
-          saveBatchResults(batchResults, collectionName, rarity);
+          // Mark as uploaded in the saved file
+          if (uploadSuccess) {
+            console.log("Marking items as uploaded...");
+            batchResults.forEach(r => r.uploadedToServer = true);
+
+            // Save with all results merged
+            const allResults = [...existingResults, ...batchResults];
+            saveBatchResults(allResults, collectionName, rarity);
+          }
+        } else {
+          console.log("  ℹ️  No new stickers scraped in this batch.");
         }
 
         // Timeout between batches
